@@ -1,3 +1,4 @@
+"use client"
 import Marquee from "react-fast-marquee";
 import { Clients1, Clients2, Clients3 } from "../constants/images"; // Data de Partners
 import { useEffect, useState } from "react";
