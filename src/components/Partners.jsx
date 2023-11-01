@@ -28,7 +28,7 @@ const Partners = () => {
                     pauseOnHover={true}
                     gradient={true}
                     gradientColor={[23, 23, 24]}
-                    gradientWidth={windowWidth >= 600 ? 96 : 72}
+                    gradientWidth={72}
                 >
                     {Clients1.map((client, index) => (
                         <div key={index} className="mx-10">
@@ -42,7 +42,7 @@ const Partners = () => {
                     pauseOnHover={true}
                     gradient={true}
                     gradientColor={[23, 23, 24]}
-                    gradientWidth={windowWidth >= 600 ? 96 : 72}
+                    gradientWidth={72}
                     style={{ justifyContent: "center", alignItems: "center" }}
                 >
                     {Clients2.map((client, index) => (
@@ -57,7 +57,7 @@ const Partners = () => {
                     pauseOnHover={true}
                     gradient={true}
                     gradientColor={[23, 23, 24]}
-                    gradientWidth={windowWidth >= 600 ? 96 : 72}
+                    gradientWidth={72}
                     style={{ justifyContent: "center", alignItems: "center" }}
                 >
                     {Clients3.map((client, index) => (
