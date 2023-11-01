@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 
+import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 
@@ -23,7 +24,7 @@ const Testimonials = () => {
 
                 <div className="max-w-[437px] h-[244px] bg-[#151517] p-8 cursor-pointer border-2 border-[#313134] rounded-[12px] max-[1215px]:h-fit max-[850px]:w-fit">
                     <div className="flex items-center justify-start gap-3">
-                        <img src="/img/Testimonials/claudio.png" alt="Claudio Fiandesio" />
+                        <Image src="/img/Testimonials/claudio.png" alt="Claudio Fiandesio" width={"48"} height={"48"} />
                         <div className="flex flex-col gap-1">
                             <p className="text-[14px] font-bold">Claudio Fiandesio</p>
                             <p className="text-[14px] text-[#A1A1A9]">COO at SocialSnack</p>

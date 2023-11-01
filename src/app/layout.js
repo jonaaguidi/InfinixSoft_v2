@@ -3,6 +3,7 @@ import '../styles/buttons.scss'
 import Script from 'next/script'
 
 export const metadata = {
+  metadataBase: new URL('http://localhost:3000'),
   title: 'InfinixSoft - Your App. Our Passion',
   description: 'InfinixSoft offers strategy, business and product development (mobile, social and internet technologies) to startup and enterprise clients.',
   keywords: ['Next.js', 'React', 'JavaScript', "HTML", "Web3", "Web2", "Metaverse", "Smart Contracts", "NodeJs", "Blockchain", "iOS", "Ruby", "Rails", "Apps", "Mobile", "Web Development", "Android", "Software", "StartUps"],

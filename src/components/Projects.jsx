@@ -27,19 +27,24 @@ const Projects = () => {
   // Hook de Traducción
   const { t } = useTranslation();
 
-  // Resize de los difuminados
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState(0);
 
   useEffect(() => {
-    const handleResize = () => {
+    // Verificar si estamos en el lado del cliente (navegador)
+    if (typeof window !== 'undefined') {
+      // Acceder a window solo cuando esté disponible
       setWindowWidth(window.innerWidth);
-    };
 
-    window.addEventListener("resize", handleResize);
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
 
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+      window.addEventListener('resize', handleResize);
+
+      return () => {
+        window.removeEventListener('resize', handleResize);
+      };
+    }
   }, []);
 
   return (
