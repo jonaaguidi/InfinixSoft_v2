@@ -1,0 +1,126 @@
+@use "sass:math";
+
+$anim-duration: 3.3; // in seconds
+$anim-speed: 0.7; // in seconds
+
+:root {
+  --btn-border: 1.18px solid #6F7284;
+  --btn-border_2: 1px solid #A1A1A9;
+  --btn-bg: rgba(182, 182, 182, 0.15); 
+  --btn-text-color: #f4f4f4;
+
+  --shine-degree: 120deg;
+  --shine-color: rgba(255, 255, 255, 0.2);
+  --shine-effect: linear-gradient(
+    var(--shine-degree),
+    transparent,
+    var(--shine-color),
+    transparent
+  );
+  --shine-transition: all #{$anim-speed}s ease-in-out;
+}
+
+.btn-primary {
+  position: relative;
+  overflow: hidden;
+  font-size: 14px;
+  padding: 14px 22px;
+  border-radius: 45.4px;
+  text-decoration: none;
+  border: var(--btn-border);
+  color: var(--btn-text-color);
+  background: var(--btn-bg);
+  font-weight: 400;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shine-effect);
+  }
+}
+
+.btn-secondary {
+  position: relative;
+  overflow: hidden; // debug
+
+  // last element should not have margin
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+  font-size: 14px;
+  padding: 18px 32px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: var(--btn-border_2);
+  color: var(--btn-text-color);
+  background: var(--btn-bg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shine-effect);
+  }
+}
+
+.btn-3 {
+  position: relative;
+  overflow: hidden; // debug
+
+  // last element should not have margin
+  &:not(:last-child) {
+    margin-bottom: 0rem;
+  }
+  font-size: 14px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: var(--btn-border_2);
+  color: var(--btn-text-color);
+  background: var(--btn-bg);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--shine-effect);
+  }
+}
+
+.btn-hover {
+  &::before {
+    left: -100%;
+    transition: var(--shine-transition);
+  }
+
+  &:hover {
+    &::before {
+      left: 100%;
+    }
+  }
+}
+
+.btn-anim {
+  &::before {
+    animation: shine #{$anim-duration}s ease-in-out infinite;
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+    transition-property: left;
+  }
+  #{(calc($anim-speed / ($anim-duration + $anim-speed))* 100%)},
+  100% {
+    left: 100%;
+    transition-property: left;
+  }
+}

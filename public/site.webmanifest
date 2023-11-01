@@ -1,0 +1,23 @@
+{
+    "name": "Infinix Soft: Leading the Way in Tech Solutions",
+    "short_name": "Infinix Soft",
+    "description": "Infinix Soft is your partner for innovative tech solutions. We specialize in mobile app development, AI integration, and more.",
+    "icons": [
+        {
+            "src": "./img/favicons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./img/favicons/android-chrome-192x192.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "/",
+    "scope": "/",
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait-primary"
+}
