@@ -13,9 +13,9 @@ const About = () => {
     return (
         <section id="about" className="w-fit h-[680px] mx-auto px-28 py-20 mb-20 flex items-center justify-center gap-10 max-[1300px]:gap-4 max-[950px]:gap-0 max-[880px]:px-14 max-[675px]:px-7">
             {/* Si el ancho es mayor a 1000px aparece Planet */}
-            {/* <div className="max-[1000px]:hidden">
+            <div className="max-[1000px]:hidden">
                <Planet /> 
-            </div> */}
+            </div> 
              
             <div className=" max-w-[494px] flex flex-col justify-center">
 
