@@ -30,7 +30,7 @@ const Form = ({ onClose }) => {
 
 
     return (
-        <div className={`fixed overflow-y-auto z-max top-0 left-0 w-screen h-screen bg-[#171718] px-24 flex gap-16 justify-center items-center transition-wipe-in-down ${shouldAnimateOut ? 'transition-wipe-out-up' : ''} max-[1292px]:flex-col max-[1292px]:items-center max-[1292px]:justify-start max-[1292px]:top-0 max-[1292px]:pb-48 max-[830px]:px-14 max-[672px]:px-7 max-[420px]:gap-8`}>
+        <div className={`fixed overflow-y-auto z-max top-0 left-0 w-[100%] h-[100%] bg-[#171718] px-24 flex gap-16 justify-center items-center transition-wipe-in-down ${shouldAnimateOut ? 'transition-wipe-out-up' : ''} max-[1292px]:flex-col max-[1292px]:items-center max-[1292px]:justify-start max-[1292px]:top-0 max-[1292px]:pb-48 max-[830px]:px-14 max-[672px]:px-7 max-[420px]:gap-8`}>
 
             {/* Text "Contact" */}
             <div className='bg-transparent p-10 rounded-lg max-[502px]:px-4 max-[455px]:px-0'>
@@ -71,22 +71,23 @@ const Form = ({ onClose }) => {
                         <Image src={Arrow} alt='arrow' />
                         <span className='font-bold'>Reach out to us via email:</span><span className='text-[#db3957] font-bold cursor-pointer'>info@infinixsoft.com</span>
                     </li>
-                    <li className='flex gap-1.5 pb-2 border-b border-opacity-20 border-[#A1A1A2] max-[1467px]:text-[14px] max-[1379px]:items-start max-[586px]:text-[12px] max-[422px]:flex-wrap'>
+                    <li className='flex items-center gap-1.5 pb-3 border-b border-opacity-20 border-[#A1A1A2] max-[1467px]:text-[14px] max-[1379px]:items-start max-[586px]:text-[12px] max-[422px]:flex-wrap'>
                         <Image src={Arrow} alt='arrow' />
-                        <span className='font-bold'>+1 (877) 789 8761</span>
+                        <span className='font-bold'>+1 (877) 789 8761 </span>
+                        <span className=''> - </span>
+                        <div className='flex gap-2 max-[1467px]:text-[14px] max-[1379px]:items-start max-[586px]:text-[12px] max-[422px]:flex-wrap'>
+                            <a href='https://www.linkedin.com/company/infinixsoft/' target='_blank' rel='noreferrer'>
+                                <FaLinkedinIn className='text-[18px] cursor-pointer transition duration-500 transform hover:scale-[1.10]' />
+                            </a>
+                            <a href='https://www.instagram.com/infinix.soft/' target='_blank' rel='noreferrer'>
+                                <FaInstagram className='text-[18px] cursor-pointer transition duration-500 transform hover:scale-[1.10] ml-1' />
+                            </a>
+                            <a href='https://twitter.com/InfinixSoft' target='_blank' rel='noreferrer'>
+                                <FaSquareXTwitter className='text-[18px] cursor-pointer transition duration-500 transform hover:scale-[1.10] ml-1' />
+                            </a>
+                        </div>
                     </li>
-                    <li className='flex gap-3 pb-3 border-b border-opacity-20 border-[#A1A1A2] max-[1467px]:text-[14px] max-[1379px]:items-start max-[586px]:text-[12px] max-[422px]:flex-wrap'>
-                        <Image src={Arrow} alt='arrow' />
-                        <a href='https://www.linkedin.com/company/infinixsoft/' target='_blank' rel='noreferrer'>
-                            <FaLinkedinIn className='text-[20px] cursor-pointer transition duration-500 transform hover:scale-[1.10]' />
-                        </a>
-                        <a href='https://www.instagram.com/infinix.soft/' target='_blank' rel='noreferrer'>
-                            <FaInstagram className='text-[20px] cursor-pointer transition duration-500 transform hover:scale-[1.10] ml-1' />
-                        </a>
-                        <a href='https://twitter.com/InfinixSoft' target='_blank' rel='noreferrer'>
-                            <FaSquareXTwitter className='text-[20px] cursor-pointer transition duration-500 transform hover:scale-[1.10] ml-1' />
-                        </a>
-                    </li>
+
                 </ul>
             </div>
 

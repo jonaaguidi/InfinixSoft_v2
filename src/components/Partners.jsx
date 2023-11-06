@@ -1,4 +1,3 @@
-"use client"
 import Marquee from "react-fast-marquee";
 import { Clients1, Clients2, Clients3 } from "../constants/images"; // Data de Partners
 import { useTranslation } from "react-i18next";
@@ -20,7 +19,7 @@ const Partners = () => {
                     {t("clientsSubtitle")}
                 </h4>
             </div>
-            <div className="max-w-[1420px] flex flex-col gap-20 max-xl:max-w-[1100px] max-lg:max-w-[900px] max-md:max-w-[680px] max-sm:max-w-[480px] max-[425px]:w-[400px] max-[400px]:w-[385px]">
+            <div className="max-w-[1420px] flex flex-col gap-20 max-[1420px]:max-w-[100%]">
                 <Marquee
                     style={{ justifyContent: "center", alignItems: "center" }}
                     direction="right"

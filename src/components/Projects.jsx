@@ -65,7 +65,7 @@ const Projects = () => {
 
 
         <div className="relative" >
-          <div className={`absolute left-[68px] inset-0 rounded-[999px] bg-[#d78e27] blur-[106px] opacity-80 ${windowWidth < 620 ? "top-16 w-[156px] h-[268px]" : "top-24 w-[386px] h-[368px]"
+          <div className={`absolute left-[68px] inset-0 rounded-[999px] bg-[#d78e27] blur-[96px] opacity-80 ${windowWidth < 620 ? "top-16 w-[156px] h-[268px]" : "top-24 w-[386px] h-[368px]"
             }`}></div>
           <Image alt="BomboImage" className="scale-[1.17]" src={BomboImage} width={605} height={556} />
         </div>
@@ -215,7 +215,7 @@ const Projects = () => {
 
         <div className="relative z-0 flex items-center justify-center" >
           <div
-            className={`absolute inset-0 rounded-[999px] bg-[#7DE972] blur-[126px] opacity-80 ${windowWidth < 620 ? "top-10 left-[60px] w-[140px] h-[248px]" : "left-[100px] top-24 w-[386px] h-[368px]"
+            className={`absolute inset-0 rounded-[999px] bg-[#7DE972] blur-[72px] opacity-80 ${windowWidth < 620 ? "top-10 left-[60px] w-[140px] h-[248px]" : "left-[100px] top-24 w-[386px] h-[368px]"
               }`}
           ></div>
           <Image alt="biotoken" className={`scale-100 pt-5 ${windowWidth < 440 ? "pl-10" : "pl-16"} pr-10 max-[1240px]:scale-95`} src={BiotokenImage} width={562} height={589} />
@@ -226,7 +226,7 @@ const Projects = () => {
       <div id="Future" className="flex items-center justify-center gap-10 pt-28 max-[1210px]:scale-90 max-[1040px]:flex-col-reverse max-[1040px]:scale-100" >
 
         <div className="relative flex items-center justify-center">
-          <div className={`absolute left-[80px] top-20 inset-0 rounded-[999px] bg-[#99ACC8] blur-[126px] opacity-80 ${windowWidth < 620 ? "w-[152px] h-[216px]" : "w-[386px] h-[368px]"
+          <div className={`absolute left-[80px] top-20 inset-0 rounded-[999px] bg-[#99ACC8] blur-[72px] opacity-80 ${windowWidth < 620 ? "w-[152px] h-[216px]" : "w-[386px] h-[368px]"
             }`}></div>
           <Image alt="FutureImage" className={`scale-[1.17] ${windowWidth < 620 ? "pb-24 pr-10" : "pb-20 pr-20"}`} src={FutureImage} width={605} height={556} />
         </div>

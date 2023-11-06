@@ -9,6 +9,7 @@ import Dubai from "./Dubai";
 import Form from "./Form.jsx";
 import Image from "next/image.js";
 import Link from "next/link";
+import { MdOutlineLanguage } from "react-icons/md"
 
 
 const Header = () => {
@@ -114,14 +115,17 @@ const Header = () => {
               {showForm && <Form onClose={() => setShowForm(false)} />}
             </li>
             <li className="">
-              <div onClick={toggleDropdownLang} className="flex items-center justify-center gap-2 cursor-pointer max-[1050px]:gap-1">
-                <p className="text-[14px] font-normal max-[480px]:text-[12px]">
+              <div onClick={toggleDropdownLang} className="badge px-2 flex items-center justify-center gap-1 rounded-xl cursor-pointer max-[1050px]:gap-1">
+                {/* <p className="text-[14px] font-normal max-[480px]:text-[12px]">
                   {currentLanguage === "en" ? "English (US)" : ""}
                   {currentLanguage === "ar" ? "Arabic (UAE)" : ""}
                   {currentLanguage === "es" ? "Spanish (ES)" : ""}
                   {currentLanguage === "pt" ? "Portuguese (BR)" : ""}
-                </p>
-                <Image width={22} height={12} className="relative px-1 opacity-60 hover:opacity-100 cursor-pointer max-[580px]:p-2 max-[420px]:w-8" src={Arrow} alt="arrow" />
+                </p> */}
+                <span className="text-[18px] text-white opacity-80">
+                  <MdOutlineLanguage />
+                </span>
+                <Image width={20} height={12} className="relative px-1 opacity-60 hover:opacity-100 cursor-pointer max-[420px]:w-4" src={Arrow} alt="arrow" />
               </div>
               {showDropdownLang && <Dropdown_Lang currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />
               }

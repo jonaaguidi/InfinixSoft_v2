@@ -1,3 +1,4 @@
+"use client"
 import { useEffect, useState } from "react";
 import Logo from "../../../../public/img/Header/logo.svg"
 import Arrow from "../../../../public/img/Header/arrow_dropdown.svg"

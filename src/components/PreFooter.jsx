@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Arrow from "../../public/img/Services/Arrow_2.svg";
 import Form from "./Form";
 import { BannerLogos2 } from "../constants/images";
@@ -14,29 +14,6 @@ const PreFooter = () => {
   const handleShowForm = () => {
     setShowForm(true);
   };
-
-  const getWindowWidth = () => {
-    return window.innerWidth;
-  };
-
-  const [windowWidth, setWindowWidth] = useState(getWindowWidth());
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(getWindowWidth());
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const absoluteElementClasses = `absolute z-10 rounded-[999px] bg-[#DB3957] top-36 ${windowWidth <= 820
-      ? "w-[136px] h-[311px] blur-[96px]"
-      : "w-[600px] h-[311px] blur-[160px]"
-    } transition-all duration-500 opacity-30`;
 
   return (
     <footer id="footer" className="w-full h-fit flex flex-col items-center justify-center bg-[#171718] max-[970px]:px-14 max-[560px]:px-7">
@@ -78,7 +55,7 @@ const PreFooter = () => {
           {t("buttonText4")}
           <Image src={Arrow} alt="Arrow" />
         </button>
-        <div className={absoluteElementClasses}></div>
+        <div className="degradePrefooter"></div>
       </div>
       {showForm && <Form onClose={() => setShowForm(false)} />}
     </footer>
