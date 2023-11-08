@@ -2,19 +2,18 @@
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
 
-const Dropdown_Lang = ({ setCurrentLanguage }) => {
+const Dropdown_Lang = () => {
   const { t } = useTranslation();
 
   // Dropdown_Lang.js
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
-    setCurrentLanguage(language); // Actualiza el idioma en el estado del Header
   };
 
 
 
   return (
-    <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-black shadow-navbar p-2 rounded-md top-[124px] max-[469px]:left-58">
+    <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-black p-2 rounded-md top-[140px] right-[112px] max-[574px]:right-[82px]">
       <div className="w-fit flex flex-col rounded-lg items-start">
         <div
           onClick={() => handleLanguageChange('en')}

@@ -33,7 +33,7 @@ const Culture = () => {
 
         <div className="flex justify-center flex-wrap pt-20 gap-6 max-[832px]:gap-12 max-[800px]:gap-7">
 
-          <div className="max-w-[390px] z-10 relative max-[1442px]:w-[356px] max-[400px]:w-[304px]">
+          <div className="max-w-[390px] z-10 relative max-[1442px]:w-[356px] max-[500px]:w-[316px]">
             <div className="h-fit flex flex-col p-[30px] bg-cards rounded-[12px] border-2 border-[#313134] z-20 justify-start items-start max-[400px]:h-fit">
               <p className="text-[14px] font-semibold text-[#868687]">{t("cultureCardNumber")}</p>
               <h4 className="text-[#FCFCFD] text-[18px] font-bold pb-2.5 max-[400px]:p-0">{t("cultureCardText")}</h4>
@@ -41,7 +41,7 @@ const Culture = () => {
             </div>
           </div>
 
-          <div className="max-w-[390px] z-10 relative max-[1442px]:w-[356px] max-[400px]:w-[304px]">
+          <div className="max-w-[390px] z-10 relative max-[1442px]:w-[356px] max-[500px]:w-[316px]">
             <div className="h-fit flex flex-col p-[30px] bg-cards rounded-[12px] border-2 border-[#313134] z-20 justify-start items-start max-[400px]:h-fit">
               <p className="text-[14px] font-semibold text-[#868687]">{t("cultureCard2Number")}</p>
               <h4 className="text-[#FCFCFD] text-[18px] font-bold pb-2.5 max-[400px]:p-0">{t("cultureCard2Text")}</h4>
@@ -49,7 +49,7 @@ const Culture = () => {
             </div>
           </div>
 
-          <div className="max-w-[390px] z-10 relative max-[1442px]:w-[356px] max-[400px]:w-[304px]">
+          <div className="max-w-[390px] z-10 relative max-[1442px]:w-[356px] max-[500px]:w-[316px]">
             <div className="h-fit flex flex-col p-[30px] bg-cards rounded-[12px] border-2 border-[#313134] z-20 justify-start items-start max-[400px]:h-fit">
               <p className="text-[14px] font-semibold text-[#868687]">{t("cultureCard3Number")}</p>
               <h4 className="text-[#FCFCFD] text-[18px] font-bold pb-2.5 max-[400px]:p-0">{t("cultureCard3Text")}</h4>

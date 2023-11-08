@@ -5,6 +5,7 @@ import infinix_logo from "../../public/img/favicons/favicon_infinix.ico";
 import Arrow from "../../public/img/Services/Arrow_2.svg";
 import { FaInstagram, FaLinkedinIn, FaSquareXTwitter } from 'react-icons/fa6';
 import Image from "next/image";
+import { MdOutlineLanguage } from "react-icons/md";
 
 const Footer = () => {
     // Estado para abrir y cerrar el Dropdown del LANG y Form.
@@ -65,17 +66,14 @@ const Footer = () => {
                 <li className="hover-underline-animation">
                     <a target="_blank" href="https://infinixholdinggroup.com/partner/" rel="noreferrer">Partner</a>
                 </li>
-                <li className="relative">
-                    <div onClick={toggleDropdownLang} className="flex items-center justify-center gap-2 cursor-pointer max-[1050px]:gap-2">
-                        <p className="pb-2">
-                            {currentLanguage === "en" ? "English (US)" : ""}
-                            {currentLanguage === "ar" ? "Arabic (UAE)" : ""}
-                            {currentLanguage === "es" ? "Spanish (ES)" : ""}
-                            {currentLanguage === "pt" ? "Portuguese (BR)" : ""}
-                        </p>
-                        <Image className="scale-105 relative pb-1.5 pl-0.5 opacity-60 hover:opacity-100 cursor-pointer rotate-[270deg] mb-1 max-[420px]:scale-95" src={Arrow} alt="arrow" />
+                <li>
+                    <div onClick={toggleDropdownLang} className="badge mb-[10px] px-2 flex items-center justify-center gap-1 rounded-xl cursor-pointer max-[1050px]:gap-1">
+                        <span className="text-[18px] text-white opacity-80">
+                            <MdOutlineLanguage />
+                        </span>
+                        <Image width={20} height={12} className="relative rotate-[-90deg] px-1 opacity-60 hover:opacity-100 cursor-pointer max-[420px]:w-4" src={Arrow} alt="arrow" />
                     </div>
-                    {showDropdownLang && <Dropdown_Lang_Footer currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />}
+                    {showDropdownLang && <Dropdown_Lang_Footer />}
                 </li>
             </ul>
         </footer>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "cobe": "^0.6.3",
+    "contentful": "^10.6.5",
     "i18next": "^23.6.0",
     "next": "14.0.1",
     "react": "^18",
@@ -19,7 +20,6 @@
     "react-icons": "^4.11.0",
     "react-tilt": "^1.0.2",
     "react-tooltip": "^5.21.6",
-    "sass": "^1.69.5",
     "tailwindcss-animated": "^1.0.1"
   },
   "devDependencies": {

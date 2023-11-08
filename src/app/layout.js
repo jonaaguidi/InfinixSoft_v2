@@ -1,5 +1,4 @@
 import '../styles/globals.css'
-import '../styles/buttons.scss'
 import Script from 'next/script'
 
 export const metadata = {

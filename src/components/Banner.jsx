@@ -1,8 +1,10 @@
+"use client"
 import Image from "next/image";
 import { BannerLogos } from "../constants/images"
 import Marquee from 'react-fast-marquee'; // Importa react-fast-marquee
 
 const Banner = () => {
+  
   const isMobile = typeof window !== 'undefined' && window.innerWidth <= 600;
 
   return (

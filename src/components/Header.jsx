@@ -22,9 +22,6 @@ const Header = () => {
   const [showDropdownMenu, setShowDropdownMenu] = useState(false);
   // Estado para abrir y cerrar el Form de Contacto.
   const [showForm, setShowForm] = useState(false);
-  // Estado Default language
-  const [currentLanguage, setCurrentLanguage] = useState("en");
-
 
   // Función para abrir/cerrar el Form de Contacto.
   const toggleShowForm = () => {
@@ -94,7 +91,7 @@ const Header = () => {
 
 
         <nav className="flex items-center z-50 gap-10 mt-2 max-[580px]:gap-3 max-[470px]:gap-2 max-[400px]:gap-0">
-          <ul className="flex items-center gap-10 max-[580px]:gap-3 max-[470px]:gap-2 max-[400px]:gap-0 list-none p-0 m-0">
+          <ul className="flex items-center gap-9 max-[580px]:gap-3 max-[470px]:gap-2 max-[400px]:gap-0 list-none p-0 m-0">
             <li className="hover-underline-animation mt-2 max-[1170px]:hidden">
               <a href="#projects" className="text-[14px] font-normal cursor-pointer">Case Studies</a>
             </li>
@@ -114,21 +111,14 @@ const Header = () => {
               </button>
               {showForm && <Form onClose={() => setShowForm(false)} />}
             </li>
-            <li className="">
+            <li>
               <div onClick={toggleDropdownLang} className="badge px-2 flex items-center justify-center gap-1 rounded-xl cursor-pointer max-[1050px]:gap-1">
-                {/* <p className="text-[14px] font-normal max-[480px]:text-[12px]">
-                  {currentLanguage === "en" ? "English (US)" : ""}
-                  {currentLanguage === "ar" ? "Arabic (UAE)" : ""}
-                  {currentLanguage === "es" ? "Spanish (ES)" : ""}
-                  {currentLanguage === "pt" ? "Portuguese (BR)" : ""}
-                </p> */}
                 <span className="text-[18px] text-white opacity-80">
                   <MdOutlineLanguage />
                 </span>
                 <Image width={20} height={12} className="relative px-1 opacity-60 hover:opacity-100 cursor-pointer max-[420px]:w-4" src={Arrow} alt="arrow" />
               </div>
-              {showDropdownLang && <Dropdown_Lang currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />
-              }
+              {showDropdownLang && <Dropdown_Lang />}
             </li>
             <li className="cursor-pointer min-[1170px]:hidden">
               <div

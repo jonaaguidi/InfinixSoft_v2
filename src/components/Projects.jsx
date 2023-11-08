@@ -67,7 +67,7 @@ const Projects = () => {
         <div className="relative" >
           <div className={`absolute left-[68px] inset-0 rounded-[999px] bg-[#d78e27] blur-[96px] opacity-80 ${windowWidth < 620 ? "top-16 w-[156px] h-[268px]" : "top-24 w-[386px] h-[368px]"
             }`}></div>
-          <Image alt="BomboImage" className="scale-[1.17]" src={BomboImage} width={605} height={556} />
+          <Image alt="BomboImage" className="scale-[1.14]" src={BomboImage} width={605} height={556} />
         </div>
 
         <div className="max-w-[546px] z-0 flex flex-col flex-end gap-10 max-[1440px]:scale-[0.90] max-[1040px]:scale-[0.85]">
@@ -228,7 +228,7 @@ const Projects = () => {
         <div className="relative flex items-center justify-center">
           <div className={`absolute left-[80px] top-20 inset-0 rounded-[999px] bg-[#99ACC8] blur-[72px] opacity-80 ${windowWidth < 620 ? "w-[152px] h-[216px]" : "w-[386px] h-[368px]"
             }`}></div>
-          <Image alt="FutureImage" className={`scale-[1.17] ${windowWidth < 620 ? "pb-24 pr-10" : "pb-20 pr-20"}`} src={FutureImage} width={605} height={556} />
+          <Image alt="FutureImage" className={`scale-[1.14] ${windowWidth < 620 ? "pb-24 pr-10" : "pb-20 pr-20"}`} src={FutureImage} width={605} height={556} />
         </div>
 
         <div className="max-w-[546px] z-0 flex flex-col flex-end gap-10 max-[1440px]:scale-[0.90] max-[1040px]:scale-[0.85]">

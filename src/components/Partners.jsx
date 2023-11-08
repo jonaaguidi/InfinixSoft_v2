@@ -19,7 +19,7 @@ const Partners = () => {
                     {t("clientsSubtitle")}
                 </h4>
             </div>
-            <div className="max-w-[1420px] flex flex-col gap-20 max-[1420px]:max-w-[100%]">
+            <div className="max-w-[1420px] flex flex-col gap-20 max-[1420px]:max-w-[100%] max-[800px]:scale-90">
                 <Marquee
                     style={{ justifyContent: "center", alignItems: "center" }}
                     direction="right"
