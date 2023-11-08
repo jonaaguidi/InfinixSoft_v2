@@ -28,7 +28,7 @@ const BlogLayout = () => {
       </h1>
       <div>
         {postTitles.map((title, index) => (
-          <div className="text-2xl" key={index}>
+          <div className="text-[28px]" key={index}>
             <h2>{title}</h2>
           </div>
         ))}
