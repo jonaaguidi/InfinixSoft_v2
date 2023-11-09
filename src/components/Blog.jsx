@@ -19,12 +19,6 @@ const Blog = () => {
                     <h3 className="text-[42px] leading-[120%] text-center font-bold pb-3 max-[1360px]:text-[32px]">{t("blogText")}</h3>
                     <p className="text-[#A1A1A9] text-center text-[18px] font-normal leading-[150%]">{t("blogText2")}</p>
                 </div>
-                <Link href="/blog" target="_self" rel="noreferrer">
-                    <button className="btn-primary btn-hover transition duration-400 hover:shadow-opacity flex items-center justify-center gap-2 max-w-[300px]">
-                        {t("buttonText3")}
-                        <Image className="ml-1 w-4" src={Arrow} alt="Arrow" />
-                    </button>
-                </Link>
             </div>
 
             <div className="flex justify-center items-center pt-16 pb-20 gap-24 max-[1360px]:gap-16 max-[1080px]:flex-wrap max-[1080px]:gap-12 max-[1080px]:justify-center max-[500px]:scale-90">
@@ -50,6 +44,12 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
+            <Link href="/blog" target="_self" rel="noreferrer">
+                <button className="btn-primary btn-hover transition duration-400 hover:shadow-opacity flex items-center justify-center gap-2 max-w-[300px]">
+                    {t("buttonText3")}
+                    <Image className="ml-1 w-4" src={Arrow} alt="Arrow" />
+                </button>
+            </Link>
         </section>
     )
 }

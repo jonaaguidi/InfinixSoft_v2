@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@react-spring/web": "^9.7.3",
     "cobe": "^0.6.3",
     "contentful": "^10.6.5",
     "i18next": "^23.6.0",

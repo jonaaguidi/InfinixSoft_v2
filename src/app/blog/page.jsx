@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "../../../public/img/favicons/favicon_infinix.ico";
+import image1 from "../../../public/img/Blog/Infinixdubai.png"
 
 const BlogLayout = () => {
   const [postTitles, setPostTitles] = useState([]);
@@ -26,10 +27,11 @@ const BlogLayout = () => {
         Welcome to our blog
         <Image src={logo} alt="InfinixSoft" width={48} height={48} />
       </h1>
-      <div>
+      <div className="flex flex-wrap gap-8 justify-center items-center">
         {postTitles.map((title, index) => (
-          <div className="text-[28px]" key={index}>
-            <h2>{title}</h2>
+          <div className="max-w-[320px]" key={index}>
+            <Image src={image1} alt="Image" width={360} height={788} />
+            <h2 className="text-[18px]">{title}</h2>
           </div>
         ))}
       </div>
