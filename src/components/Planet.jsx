@@ -35,7 +35,7 @@ const DraggablePlanet = () => {
       dark: 1,
       diffuse: 3,
       scale: 0.8,
-      mapSamples: 7000,
+      mapSamples: 4500,
       mapBrightness: 8,
       baseColor: [0.3, 0.3, 0.3],
       markerColor: [0.8588, 0.2235, 0.3412],
@@ -48,6 +48,7 @@ const DraggablePlanet = () => {
         { location: [-23.5505, -46.6333], size: 0.06 },   // São Paulo
         { location: [19.4326, -99.1332], size: 0.06 },    // Ciudad de México
         { location: [13.6972, -89.1912], size: 0.06 },    // San Salvador
+        { location: [41.3851, 2.1734], size: 0.06 }       // Barcelona
       ],
       onRender: (state) => {
         onRender(state);
@@ -113,7 +114,7 @@ const DraggablePlanet = () => {
       <canvas
         ref={canvasRef}
         className="scale-110 z-[100]"
-        style={{ width: 600, height: 600, maxWidth: "100%", aspectRatio: 1 }}
+        style={{ width: 550, height: 550, maxWidth: "100%", aspectRatio: 1 }}
       />
     </div>
   );

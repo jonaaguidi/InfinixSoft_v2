@@ -1,7 +1,7 @@
 "use client"
 import About from "@/components/About";
 import Banner from "@/components/Banner";
-import Blog from "@/components/Blog";
+// import Blog from "@/components/Blog";
 import Culture from "@/components/Culture";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -12,51 +12,28 @@ import Projects from "@/components/Projects";
 import Services from "@/components/Services";
 import TeamComponent from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
-import i18next from 'i18next';
-import { initReactI18next } from 'react-i18next';
-import En from "../i18n/en.json";
-import Es from "../i18n/es.json";
-import Pt from "../i18n/pt.json";
-import Ar from "../i18n/ar.json";
-
-i18next.use(initReactI18next).init({
-  lng: 'en',
-  fallbackLng: 'en',
-  interpolation: { escapeValue: false },
-  resources: {
-    en: {
-      translation: En,
-    },
-    es: {
-      translation: Es,
-    },
-    pt: {
-      translation: Pt,
-    },
-    ar: {
-      translation: Ar,
-    },
-  }
-});
+import { I18nextProvider } from 'react-i18next';
+import i18n from "../i18n/index"
 
 export default function Home() {
   return (
     <>
-      <Header />
-      <main className="main">
-        <Hero />
-        <Banner />
-        <About />
-        <Culture />
-        <TeamComponent />
-        <Projects />
-        <Services />
-        <Partners />
-        <Testimonials /> 
-        <Blog />
-        <PreFooter />
-      </main>
-      <Footer />
+      <I18nextProvider i18n={i18n}>
+        <Header />
+        <main className="main">
+          <Hero />
+          <Banner />
+          <About />
+          <Culture />
+          <TeamComponent />
+          <Projects />
+          <Services />
+          <Partners />
+          <Testimonials />
+          <PreFooter />
+        </main>
+        <Footer />
+      </I18nextProvider>
     </>
   )
 }

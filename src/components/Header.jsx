@@ -18,6 +18,8 @@ const Header = () => {
   const [showDropdownHolding, setShowDropdownHolding] = useState(false);
   // Estado para abrir y cerrar el Dropdown del LANG.
   const [showDropdownLang, setShowDropdownLang] = useState(false);
+  // Estado para rotar la flecha del LANG. 
+  const [rotate, setRotate] = useState(0);
   // Estado para abrir y cerrar el Dropdown del Menú.
   const [showDropdownMenu, setShowDropdownMenu] = useState(false);
   // Estado para abrir y cerrar el Form de Contacto.
@@ -40,6 +42,7 @@ const Header = () => {
   // Función abrir/cerrar dropdown de las Flags.
   const toggleDropdownLang = () => {
     setShowDropdownLang(!showDropdownLang);
+    setRotate(rotate === 0 ? 180 : 0);
     if (!showDropdownLang) {
       setShowDropdownHolding(false);
       setShowDropdownMenu(false);
@@ -64,6 +67,7 @@ const Header = () => {
         setShowDropdownHolding(false);
         setShowDropdownLang(false);
         setShowDropdownMenu(false);
+        setRotate(rotate === 0 ? 180 : 0);
       }
     };
 
@@ -74,6 +78,7 @@ const Header = () => {
     return () => {
       document.removeEventListener("click", handleGlobalClick);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -91,7 +96,7 @@ const Header = () => {
 
 
         <nav className="flex items-center z-50 gap-10 mt-2 max-[580px]:gap-3 max-[470px]:gap-2 max-[400px]:gap-0">
-          <ul className="flex items-center gap-9 max-[580px]:gap-3 max-[470px]:gap-2 max-[400px]:gap-0 list-none p-0 m-0">
+          <ul className="flex items-center gap-9 max-[580px]:gap-3 max-[470px]:gap-2 list-none p-0 m-0">
             <li className="hover-underline-animation mt-2 max-[1170px]:hidden">
               <a href="#projects" className="text-[14px] font-normal cursor-pointer">Case Studies</a>
             </li>
@@ -112,14 +117,23 @@ const Header = () => {
               {showForm && <Form onClose={() => setShowForm(false)} />}
             </li>
             <li>
-              <div onClick={toggleDropdownLang} className="badge px-2 flex items-center justify-center gap-1 rounded-xl cursor-pointer max-[1050px]:gap-1">
+              <div onClick={toggleDropdownLang} className="badge lang-hover px-2 flex items-center justify-center gap-1 rounded-xl cursor-pointer max-[1050px]:gap-1">
                 <span className="text-[18px] text-white opacity-80">
                   <MdOutlineLanguage />
                 </span>
-                <Image width={20} height={12} className="relative px-1 opacity-60 hover:opacity-100 cursor-pointer max-[420px]:w-4" src={Arrow} alt="arrow" />
+                <Image
+                  style={{
+                    transform: `rotate(${rotate}deg)`,
+                    transition: 'transform 0.5s ease',
+                  }}
+                  width={20}
+                  height={12}
+                  className="relative px-1 opacity-80 cursor-pointer max-[420px]:w-4"
+                  src={Arrow} alt="arrow" />
               </div>
-              {showDropdownLang && <Dropdown_Lang />}
+              {showDropdownLang && <Dropdown_Lang setShowDropdownLang={setShowDropdownLang} />}
             </li>
+
             <li className="cursor-pointer min-[1170px]:hidden">
               <div
                 className={`menu-button ${showDropdownMenu ? 'open' : ''}`}
@@ -127,7 +141,7 @@ const Header = () => {
                   toggleDropdownMenu();
                 }}
               >
-                <div className="menu-icon ">
+                <div className="menu-icon">
                   <span className={`span-1 ${showDropdownMenu ? 'open-span-1' : ''}`}></span>
                   <span className={`span-2 ${showDropdownMenu ? 'open-span-2' : ''}`}></span>
                   <span className={`span-3 ${showDropdownMenu ? 'open-span-3' : ''}`}></span>
@@ -135,9 +149,9 @@ const Header = () => {
               </div>
               {showDropdownMenu && <Dropdown_Menu />}
             </li>
+
           </ul>
         </nav>
-
       </header>
     </>
   );

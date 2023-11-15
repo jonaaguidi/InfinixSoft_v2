@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer"
-import Header_v2 from "../projects/components/Header_v2"
+import Header_v2 from "../../components/Header_v2"
 
 
 export const metadata = {

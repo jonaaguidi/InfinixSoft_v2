@@ -12,12 +12,12 @@ const About = () => {
 
     return (
         <section id="about" className="w-fit h-[680px] mx-auto px-28 py-20 mb-20 flex items-center justify-center gap-10 max-[1300px]:gap-4 max-[950px]:gap-0 max-[880px]:px-14 max-[675px]:px-7">
-            {/* Si el ancho es mayor a 1000px aparece Planet */}
-            <div className="max-[1000px]:hidden">
-               <DraggablePlanet /> 
+            {/* Si el ancho es mayor a 1100px aparece Planet */}
+            <div className="max-[940px]:hidden">
+                <DraggablePlanet />
             </div>  
-             
-            <div className=" max-w-[494px] flex flex-col justify-center">
+              
+            <div className="max-w-[494px] flex flex-col justify-center px-4 z-50">
 
                 <div className="w-fit max-w-[428px] flex flex-col items-start pb-6">
                     <div className="badge w-fit flex items-center justify-center gap-1">

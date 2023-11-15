@@ -12,16 +12,16 @@ const Blog = () => {
     const { t } = useTranslation();
 
     return (
-        <section className="max-w-[1220px] mx-auto py-20 pb-60 max-[1360px]:px-28 max-[840px]:py-10 max-[880px]:px-14 max-[680px]:px-7">
+        <section className="max-w-[1220px] mx-auto flex flex-col items-center justify-center py-20 pb-20 max-[1360px]:px-28 max-[840px]:py-10 max-[880px]:px-14 max-[680px]:px-7">
 
-            <div className="h-auto flex flex-col justify-center items-center pb-20 max-[840px]:flex-wrap max-[367px]:gap-1">
+            <div className="h-auto flex flex-col justify-center items-center pb-4 max-[840px]:flex-wrap max-[367px]:gap-1">
                 <div className="max-w-[550px] pb-6 max-[500px]:scale-90">
                     <h3 className="text-[42px] leading-[120%] text-center font-bold pb-3 max-[1360px]:text-[32px]">{t("blogText")}</h3>
                     <p className="text-[#A1A1A9] text-center text-[18px] font-normal leading-[150%]">{t("blogText2")}</p>
                 </div>
             </div>
 
-            <div className="flex justify-center items-center pt-16 pb-20 gap-24 max-[1360px]:gap-16 max-[1080px]:flex-wrap max-[1080px]:gap-12 max-[1080px]:justify-center max-[500px]:scale-90">
+            <div className="flex justify-center items-center pt-16 pb-32 gap-24 max-[1360px]:gap-16 max-[1080px]:flex-wrap max-[1080px]:gap-12 max-[1080px]:justify-center max-[500px]:scale-90">
                 <Image className="z-10 opacity-100 max-[1360px]:scale-[0.85] max-[1080px]:scale-100 max-[840px]:w-[501px]" src={ImageDubai} alt="BlogImage" width={524} height={348}></Image>
                 <div className="flex flex-col gap-4">
                     <button className="badge w-fit font-normal flex items-center gap-2 shadow-none">
@@ -44,7 +44,7 @@ const Blog = () => {
                     </div>
                 </div>
             </div>
-            <Link href="/blog" target="_self" rel="noreferrer">
+            <Link className="pb-16" href="/blog" target="_self" rel="noreferrer">
                 <button className="btn-primary btn-hover transition duration-400 hover:shadow-opacity flex items-center justify-center gap-2 max-w-[300px]">
                     {t("buttonText3")}
                     <Image className="ml-1 w-4" src={Arrow} alt="Arrow" />

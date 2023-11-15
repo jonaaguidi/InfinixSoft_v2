@@ -22,7 +22,7 @@ const Testimonials = () => {
                     </h4>
                 </div>
 
-                <div className="max-w-[437px] h-[244px] bg-[#151517] p-8 cursor-pointer border-2 border-[#313134] rounded-[12px] max-[1215px]:h-fit max-[850px]:w-fit">
+                <div className="max-w-[437px] h-[244px] bg-[#151517] p-8 border-2 border-[#313134] rounded-[12px] max-[1215px]:h-fit max-[850px]:w-fit">
                     <div className="flex items-center justify-start gap-3">
                         <Image src="/img/Testimonials/claudio.png" alt="Claudio Fiandesio" width={"48"} height={"48"} />
                         <div className="flex flex-col gap-1">

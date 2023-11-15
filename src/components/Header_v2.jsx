@@ -1,15 +1,16 @@
 "use client"
 import { useEffect, useState } from "react";
-import Logo from "../../../../public/img/Header/logo.svg"
-import Arrow from "../../../../public/img/Header/arrow_dropdown.svg"
-import Arrow2 from "../../../../public/img/Services/Arrow_2.svg"
-import Dropdown_Holding from "../../../components/Dropdown_Holding.jsx";
-import Dropdown_Lang from "../../../components/Dropdown_Lang.jsx";
-import Dropdown_Menu from "../../../components/Dropdown_Menu";
-import Dubai from "../../../components/Dubai.jsx";
-import Form from "../../../components/Form.jsx";
+import Logo from "../../public/img/Header/logo.svg"
+import Arrow from "../../public/img/Header/arrow_dropdown.svg"
+import Arrow2 from "../../public/img/Services/Arrow_2.svg"
+import Dropdown_Holding from "./Dropdown_Holding.jsx";
+import Dropdown_Lang from "./Dropdown_Lang.jsx";
+import Dropdown_Menu from "./Dropdown_Menu";
+import Dubai from "./Dubai.jsx";
+import Form from "./Form.jsx";
 import Image from "next/image";
 import Link from "next/link";
+import { MdOutlineLanguage } from "react-icons/md";
 
 
 const Header_v2 = () => {
@@ -18,12 +19,12 @@ const Header_v2 = () => {
   const [showDropdownHolding, setShowDropdownHolding] = useState(false);
   // Estado para abrir y cerrar el Dropdown del LANG.
   const [showDropdownLang, setShowDropdownLang] = useState(false);
+  // Estado para rotar la flecha del LANG. 
+  const [rotate, setRotate] = useState(0);
   // Estado para abrir y cerrar el Dropdown del Menú.
   const [showDropdownMenu, setShowDropdownMenu] = useState(false);
   // Estado para abrir y cerrar el Form de Contacto.
   const [showForm, setShowForm] = useState(false);
-  // Estado Default language
-  const [currentLanguage, setCurrentLanguage] = useState("en");
 
 
   // Función para abrir/cerrar el Form de Contacto.
@@ -42,6 +43,7 @@ const Header_v2 = () => {
 
   // Función abrir/cerrar dropdown de las Flags.
   const toggleDropdownLang = () => {
+    setRotate(rotate === 0 ? 180 : 0);
     setShowDropdownLang(!showDropdownLang);
     if (!showDropdownLang) {
       setShowDropdownHolding(false);
@@ -67,6 +69,7 @@ const Header_v2 = () => {
         setShowDropdownHolding(false);
         setShowDropdownLang(false);
         setShowDropdownMenu(false);
+        setRotate(rotate === 0 ? 180 : 0);
       }
     };
 
@@ -111,18 +114,22 @@ const Header_v2 = () => {
               </button>
               {showForm && <Form onClose={() => setShowForm(false)} />}
             </li>
-            <li className="">
-              <div onClick={toggleDropdownLang} className="flex items-center justify-center gap-2 cursor-pointer max-[1050px]:gap-1">
-                <p className="text-[14px] font-normal max-[480px]:text-[12px]">
-                  {currentLanguage === "en" ? "English (US)" : ""}
-                  {currentLanguage === "ar" ? "Arabic (UAE)" : ""}
-                  {currentLanguage === "es" ? "Spanish (ES)" : ""}
-                  {currentLanguage === "pt" ? "Portuguese (BR)" : ""}
-                </p>
-                <Image width={22} height={12} className="relative px-1 opacity-60 hover:opacity-100 cursor-pointer max-[580px]:p-2 max-[420px]:w-8" src={Arrow} alt="arrow" />
+            <li>
+              <div onClick={toggleDropdownLang} className="badge lang-hover px-2 flex items-center justify-center gap-1 rounded-xl cursor-pointer max-[1050px]:gap-1">
+                <span className="text-[18px] text-white opacity-80">
+                  <MdOutlineLanguage />
+                </span>
+                <Image
+                  style={{
+                    transform: `rotate(${rotate}deg)`,
+                    transition: 'transform 0.5s ease',
+                  }}
+                  width={20}
+                  height={12}
+                  className="relative px-1 opacity-80 cursor-pointer max-[420px]:w-4"
+                  src={Arrow} alt="arrow" />
               </div>
-              {showDropdownLang && <Dropdown_Lang currentLanguage={currentLanguage} setCurrentLanguage={setCurrentLanguage} />
-              }
+              {showDropdownLang && <Dropdown_Lang />}
             </li>
             <li className="cursor-pointer min-[1170px]:hidden">
               <div

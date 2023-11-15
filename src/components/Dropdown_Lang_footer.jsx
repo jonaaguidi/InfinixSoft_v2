@@ -1,6 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
+import USA from "../../public/img/Flags/usa.png"
+import Brazil from "../../public/img/Flags/brazil.png"
+import Spain from "../../public/img/Flags/spain.png"
+import Image from 'next/image';
 
 const Dropdown_Lang_footer = () => {
   const { t } = useTranslation();
@@ -8,36 +12,32 @@ const Dropdown_Lang_footer = () => {
   // Dropdown_Lang.js
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
+    localStorage.setItem('language', language);
   };
 
 
 
+
   return (
-    <div className="z-50 animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-black shadow-navbar p-2 rounded-md bottom-[140px] max-[469px]:left-58">
-      <div className="w-fit flex flex-col rounded-lg items-start">
+    <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-black p-2 rounded-md bottom-[144px] right-[144px]">
+      <div className="w-fit flex flex-col gap-1 rounded-lg items-start">
         <div
           onClick={() => handleLanguageChange('en')}
-          className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-black focus:bg-black hover:text-[#DB3957]">
-          <p className="text-[14px] font-normal">{t('English')}<span className="ml-1">(US)</span></p>
-        </div>
-        <div
-          onClick={() => handleLanguageChange('ar')}
-          className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-black focus:bg-black hover:text-[#DB3957]">
-          <p className="text-[14px] font-normal flex  items-center">
-          {t('Arabic')}
-          <span className="ml-1">(UAE)
-          </span>
-          </p>
+          className="w-full flex items-center gap-2 cursor-pointer p-2 rounded-md hover:bg-[#171718] focus:bg-[#171718]">
+          <p className="text-[12px] font-normal">{t('English')}</p>
+          <Image className='rounded-sm' src={USA} alt='United States' width={20}/>
         </div>
         <div
           onClick={() => handleLanguageChange('es')}
-          className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover:bg-black focus:bg-black hover:text-[#DB3957]">
-          <p className="text-[14px] font-normal">{t('Spanish')} <span className="ml-1">(ES)</span></p>
+          className="w-full flex items-center gap-2 cursor-pointer p-2 rounded-md hover:bg-[#171718] focus:bg-[#171718] ">
+          <p className="text-[12px] font-normal">{t('Spanish')}</p>
+          <Image className='rounded-sm' src={Spain} alt='United States' width={20}/>
         </div>
         <div
           onClick={() => handleLanguageChange('pt')}
-          className="flex items-center gap-2 cursor-pointer p-2 rounded-lg hover.bg-black focus-bg-black hover:text-[#DB3957]">
-          <p className="text-[14px] font-normal">{t('Portuguese')}<span className="ml-1">(BR)</span></p>
+          className="w-full flex items-center gap-2 cursor-pointer p-2 rounded-md hover:bg-[#171718] focus:bg-[#171718]">
+          <p className="text-[12px] font-normal">{t('Portuguese')}</p>
+          <Image className='rounded-sm' src={Brazil} alt='United States' width={20}/>
         </div>
       </div>
     </div>

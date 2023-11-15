@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import Arrow2 from "../../public/img/Services/Arrow_2.svg"
-import Header_v2 from "./projects/components/Header_v2"
+import Header_v2 from "../components/Header_v2"
 import Image from "next/image"
 
 const Notfound = () => {

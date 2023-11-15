@@ -1,5 +1,5 @@
 import Footer from "@/components/Footer"
-import Header_v2 from "./components/Header_v2"
+import Header_v2 from "../../components/Header_v2"
 
 export const metadata = {
   title: 'InfinixSoft - Our Projects',
@@ -10,7 +10,7 @@ export default function ProjectsLayout({ children }) {
   return (
     <>
       <Header_v2 />
-      {children}
+        {children}
       <Footer />
     </>
   )
