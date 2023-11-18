@@ -39,7 +39,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en">
       <Script async="" src="//connect.facebook.net/en_US/fbds.js" />
       <Script async="" src="https://www.google-analytics.com/analytics.js" />
       <Script src="https://js.hscollectedforms.net/collectedforms.js" type="text/javascript" id="CollectedForms-22404315" data-leadin-portal-id="22404315" data-leadin-env="prod" data-loader="hs-scriptloader" data-hsjs-portal="22404315" data-hsjs-env="prod" data-hsjs-hublet="na1" />

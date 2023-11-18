@@ -18,7 +18,7 @@ const Culture = () => {
   const { t } = useTranslation();
 
   return (
-    <section id="culture" className="w-full bg-culture py-20 px-28 flex flex-col items-start justify-center max-[1000px]:px-14 max-[425px]:px-7">
+    <section id="culture" className="w-full z-[100] bg-culture py-20 px-28 flex flex-col items-start justify-center max-[1000px]:px-14 max-[425px]:px-7">
 
       <div className="max-w-[1220px] mx-auto">
         <div className="max-w-[820px] flex flex-col justify-center items-start">

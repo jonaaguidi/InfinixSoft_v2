@@ -6,17 +6,17 @@ import Brazil from "../../public/img/Flags/brazil.png"
 import Spain from "../../public/img/Flags/spain.png"
 import Image from 'next/image';
 
-const Dropdown_Lang_footer = () => {
+const Dropdown_Lang_footer = ({setShowDropdownLang}) => {
   const { t } = useTranslation();
 
   // Dropdown_Lang.js
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
     localStorage.setItem('language', language);
+    setTimeout(() => {
+      setShowDropdownLang(false);
+    }, 350);
   };
-
-
-
 
   return (
     <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-black p-2 rounded-md bottom-[144px] right-[144px]">

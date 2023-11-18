@@ -9,18 +9,18 @@ import Image from 'next/image';
 const Dropdown_Lang = ({ setShowDropdownLang }) => {
   const { t } = useTranslation();
 
-  // Dropdown_Lang
   const handleLanguageChange = (language) => {
     i18n.changeLanguage(language);
     localStorage.setItem('language', language);
     setTimeout(() => {
       setShowDropdownLang(false);
+      setRotate(rotate === 0 ? 180 : 0);
     }, 350);
   };
 
 
   return (
-    <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-black p-2 rounded-md top-[140px] right-[112px] max-[574px]:right-[82px]">
+    <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-black p-2 rounded-md top-[96px] right-[112px] max-[574px]:right-[82px]">
       <div className="w-fit flex flex-col gap-1 rounded-lg items-start">
         <div
           onClick={() => { handleLanguageChange('en') }}

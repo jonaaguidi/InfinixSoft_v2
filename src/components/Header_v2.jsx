@@ -6,7 +6,6 @@ import Arrow2 from "../../public/img/Services/Arrow_2.svg"
 import Dropdown_Holding from "./Dropdown_Holding.jsx";
 import Dropdown_Lang from "./Dropdown_Lang.jsx";
 import Dropdown_Menu from "./Dropdown_Menu";
-import Dubai from "./Dubai.jsx";
 import Form from "./Form.jsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -69,7 +68,6 @@ const Header_v2 = () => {
         setShowDropdownHolding(false);
         setShowDropdownLang(false);
         setShowDropdownMenu(false);
-        setRotate(rotate === 0 ? 180 : 0);
       }
     };
 
@@ -84,7 +82,6 @@ const Header_v2 = () => {
 
   return (
     <>
-      <Dubai />
       <header className="w-full h-fit z-max bg-transparent opacity-100 px-28 py-5 flex justify-between items-center max-[880px]:px-14 max-[675px]:px-[24px] max-[675px]:py-6">
 
         <div className="flex gap-[18px] z-50 items-center max-[500px]:gap-2 max-[410px]:gap-1">
@@ -129,7 +126,7 @@ const Header_v2 = () => {
                   className="relative px-1 opacity-80 cursor-pointer max-[420px]:w-4"
                   src={Arrow} alt="arrow" />
               </div>
-              {showDropdownLang && <Dropdown_Lang />}
+              {showDropdownLang && <Dropdown_Lang setShowDropdownLang={setShowDropdownLang} />}
             </li>
             <li className="cursor-pointer min-[1170px]:hidden">
               <div

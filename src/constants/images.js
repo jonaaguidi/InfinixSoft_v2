@@ -83,14 +83,14 @@ const Holding_Dropdown = [
     link: "https://infinixholdinggroup.com/"
   },
   {
-    name: 'Infinix NFT',
-    icon: InfinixNFT,
-    link: "https://infinixNFT.com/"
-  },
-  {
     name: 'Infinix Social',
     icon: InfinixSocial,
     link: "https://infinixsocial.com/"
+  },
+  {
+    name: 'Infinix NFT',
+    icon: InfinixNFT,
+    link: "https://infinixNFT.com/"
   }
 ];
 

@@ -6,8 +6,18 @@ import Es from "./es.json";
 import Pt from "./pt.json";
 import Ar from "./ar.json";
 
+// Función para obtener el idioma del navegador o usar uno predeterminado
+const getLanguage = () => {
+  if (typeof window !== 'undefined') {
+    // Si estamos en el lado del cliente, podemos acceder a localStorage
+    return localStorage.getItem('language') || 'en';
+  }
+  // Si estamos en el lado del servidor
+  return 'en';
+};
+
 i18n.use(initReactI18next).init({
-  lng: localStorage.getItem('language') || 'en', // Use the language from localStorage, or default to 'en'
+  lng: getLanguage(),
   fallbackLng: 'en',
   interpolation: { escapeValue: false },
   resources: {

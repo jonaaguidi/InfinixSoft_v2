@@ -82,7 +82,7 @@ const Footer = () => {
                             alt="arrow"
                         />
                     </div>
-                    {showDropdownLang && <Dropdown_Lang_Footer />}
+                    {showDropdownLang && <Dropdown_Lang_Footer setShowDropdownLang={setShowDropdownLang} />}
                 </li>
             </ul>
         </footer>

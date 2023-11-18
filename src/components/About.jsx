@@ -11,8 +11,8 @@ const About = () => {
   const { t } = useTranslation();
 
     return (
-        <section id="about" className="w-fit h-[680px] mx-auto px-28 py-20 mb-20 flex items-center justify-center gap-10 max-[1300px]:gap-4 max-[950px]:gap-0 max-[880px]:px-14 max-[675px]:px-7">
-            {/* Si el ancho es mayor a 1100px aparece Planet */}
+        <section id="about" className="w-fit h-fit mx-auto px-28 py-20 flex items-center justify-center gap-10 max-[1300px]:gap-4 max-[950px]:gap-0 max-[880px]:px-14 max-[675px]:px-7">
+            {/* Si el ancho es mayor a 940px aparece Planet */}
             <div className="max-[940px]:hidden">
                 <DraggablePlanet />
             </div>  
@@ -35,7 +35,7 @@ const About = () => {
                     </p>
                 </div>
 
-                <div className="max-w-[494px] max-h-24 flex items-center gap-12 max-[1384px]:gap-10 max-[1384px]:pt-8 max-[485px]:gap-4 max-[485px]:pt-2 max-[485px]:flex-wrap max-[485px]:justify-center max-[485px]:mb-16">
+                <div className="max-w-[494px] max-h-30 mb-10 flex items-center gap-12 max-[1384px]:gap-10 max-[1384px]:pt-8 max-[485px]:gap-4 max-[485px]:pt-2 max-[485px]:flex-wrap max-[485px]:justify-center max-[485px]:mb-16">
                     <a href="https://clutch.co/profile/infinixsoft#highlights" target="_blank" rel="noreferrer">
                         <Image width={183} height={59} className="max-[1384px]:scale-75 z-10" src={logo3} alt="Clutch" />
                     </a>
