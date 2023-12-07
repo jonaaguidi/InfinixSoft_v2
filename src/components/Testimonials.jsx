@@ -29,12 +29,12 @@ const Testimonials = () => {
                             <Image src="/img/Testimonials/claudio.png" alt="Claudio Fiandesio" width={"48"} height={"48"} />
                             <div className="flex flex-col gap-1">
                                 <p className="text-[14px] font-bold">Claudio Fiandesio</p>
-                                <p className="text-[14px] text-[#A1A1A9]">COO at SocialSnack</p>
+                                <p className="text-[14px] text-[#A1A1A9]">COO at Selva by Aleph</p>
                             </div>
                         </div>
                     </Link>
                     <p className="text-[15px] text-[#A1A1A9] pt-4">
-                        "As the COO of Social Snack from Aleph group, I've been working with Infinix since 2013. Their performance as a technology partner has been exceptional, and I continue to recommend and use Infinix for our technological needs.”
+                        "As the COO of Selva from Aleph group, I've been working with Infinix since 2013. Their performance as a technology partner has been exceptional, and I continue to recommend and use Infinix for our technological needs.”
                     </p>
                 </div>
 

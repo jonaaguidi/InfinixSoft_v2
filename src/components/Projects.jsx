@@ -1,4 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
+import Appa from "../../public/img/Projects/appalogo.svg"
+import AppaImage from "../../public/img/Projects/AppaImage.png"
 import Future from "../../public/img/Projects/Future_logo.svg"
 import FutureImage from "../../public/img/Projects/image_future.png"
 import Biotoken from "../../public/img/Projects/Biotoken.svg"
@@ -10,6 +12,7 @@ import androidIcon from "../../public/img/Projects/Androidlogo.svg"
 import webIcon from "../../public/img/Projects/weblogo.svg"
 import { BsAndroid2, BsApple, BsFillCreditCard2BackFill, BsPeopleFill } from "react-icons/bs";
 import { FaAppStoreIos, FaNodeJs, FaReact } from "react-icons/fa"
+import { IoLogoGooglePlaystore } from "react-icons/io5";
 import { SlGraph } from "react-icons/sl";
 import { SiEthereum } from "react-icons/si"
 import { FaEarthAmericas } from "react-icons/fa6"
@@ -305,14 +308,98 @@ const Projects = () => {
         </div>
       </div>
 
-      <div className="w-full flex items-center justify-center mt-28 max-[800px]:mt-10 max-[800px]:pb-10">
-        <Link href="/projects" target="_self" rel="noreferrer">
-          <button className="btn-primary btn-hover transition duration-400 hover:shadow-opacity flex items-center justify-center gap-2 max-w-[300px]">
+      <div id="Appa" className="flex items-center justify-center gap-3 pt-28 max-[1210px]:scale-90 max-[1040px]:pt-4 max-[1040px]:flex-col max-[1040px]:scale-100" >
+
+        <div className="max-w-[546px] flex flex-col flex-end gap-10 max-[1440px]:scale-[0.90] max-[1040px]:scale-[0.85]">
+
+          <div className="max-w-[487px]">
+            <p className="badge w-fit font-normal mb-3">{t("AppaBadge")}</p>
+            <Image src={Appa} alt="Appa GIFT" className="pb-6" />
+            <p className="text-[12px] text-white font-semibold uppercase pb-3">{t("AppaText1")}</p>
+            <p className="text-[16px] font-normal text-[#868687] pb-6">{t("AppaText2")}</p>
+            <a href="https://www.weareappa.com/" target="_blank" rel="noreferrer">
+              <button className="btn-primary btn-hover transition duration-400 hover:shadow-button w-fit flex items-center justify-center gap-2">
+                {t("buttonText2")}
+                <Image className="ml-1 w-4" src={Arrow} alt="Arrow" />
+              </button>
+            </a>
+          </div>
+
+          <div className="flex flex-col gap-6 z-[100] ">
+            <div className="flex flex-col items-start gap-3">
+              <p className="text-[12px] font-semibold">{t("projectsTitle1")}</p>
+              <div className="flex gap-5 flex-wrap">
+                <button className="badge flex items-center gap-2">
+                  <span className="text-[18px] mb-[2px]"><BsApple /></span>
+                  +40K REVIEWS - APP STORE
+                </button>
+                <button className="badge flex items-center gap-2">
+                  <span className="text-[18px] mb-[2px]"><IoLogoGooglePlaystore />
+                  </span>
+                  +18K REVIEWS - PLAY STORE
+                </button>
+              </div>
+            </div>
+            <div className="flex flex-col items-start gap-3">
+              <p className="text-[12px] font-semibold">{t("projectsTitle2")}</p>
+              <div className="flex gap-5 flex-wrap">
+                <button className="badge flex items-center gap-2">
+                  <span className="text-[18px] mb-[2px]"><FaReact /></span>
+                  REACT
+                </button>
+                <button className="badge flex items-center gap-2">
+                  <span className="text-[18px] mb-[2px]"><FaNodeJs /></span>
+                  NODE.JS
+                </button>
+                <button className="badge flex items-center gap-2">
+                  <span className="text-[20px] mb-[2px]"><FaAppStoreIos /></span>
+                  XCODE
+                </button>
+                <button className="badge flex items-center gap-2">
+                  <span className="text-[20px] mb-[2px]"><BsAndroid2 /></span>
+                  ANDROID STUDIO
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <p className="text-[14px] text-[#A1A1A9]">{t("projectsTitle3")}</p>
+            <div className="flex gap-4 flex-wrap">
+              <div className="flex justify-center items-center gap-2">
+                <Image src={iosIcon} alt="iOS" />
+                <p className="text-[16px] text-white font-bold">iOS</p>
+              </div>
+              <div className="flex justify-center items-center gap-2">
+                <Image src={androidIcon} alt="android" />
+                <p className="text-[16px] text-white font-bold">Android</p>
+              </div>
+              <div className="flex justify-center items-center gap-2">
+                <Image src={webIcon} alt="web" />
+                <p className="text-[16px] text-white font-bold">WebApp</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="relative" >
+          <div className={`absolute left-[108px] inset-0 rounded-[999px] bg-[#03D9C5] blur-[86px] opacity-70 ${windowWidth < 620 ? "top-3 w-[156px] h-[268px]" : "top-24 w-[386px] h-[368px]"
+            }`}></div>
+          <Image alt="AppaImage" className="scale-[1.14]" src={AppaImage} width={605} height={556} />
+        </div>
+
+      </div>
+
+      <div className=" w-full flex items-center justify-center mt-28 max-[800px]:mt-20 max-[800px]:pb-12">
+        <Link href="/project" target="_self" rel="noreferrer">
+          <button className="z-100 btn-primary btn-hover transition duration-400 hover:shadow-opacity flex items-center justify-center gap-2 max-w-[300px]">
             {t("buttonText2")}
             <Image className="ml-1 w-4" src={Arrow} alt="Arrow" />
           </button>
         </Link>
       </div>
+
 
     </section>
 

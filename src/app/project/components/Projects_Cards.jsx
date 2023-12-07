@@ -1,4 +1,4 @@
-import Card_Projects from "../components/Card_Projects";
+import Card_Projects from "./Card_Projects";
 import { Card_Projects_data } from "../../../constants/default";
 import { Tooltip } from 'react-tooltip'
 import { useTranslation } from "react-i18next";

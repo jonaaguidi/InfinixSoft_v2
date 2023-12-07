@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Dropdown_Lang_Footer from "./Dropdown_Lang_footer";
 import infinix_logo from "../../public/img/favicons/favicon_infinix.ico";
 import Arrow from "../../public/img/Header/arrow_dropdown.svg"
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
+import { FaLinkedinIn } from 'react-icons/fa6';
 import Image from "next/image";
 import { MdOutlineLanguage } from "react-icons/md";
 
@@ -35,7 +35,7 @@ const Footer = () => {
         return () => {
             document.removeEventListener("click", handleGlobalClick);
         };
-    }, []);
+    }, );
 
     return (
         <footer className="relative bottom-0 left-0 w-full h-fit rounded-xl bg-[#181819] flex z-10 justify-between items-center px-40 py-20 max-[1300px]:flex-col max-[1300px]:gap-6 max-[980px]:px-14 max-[560px]:px-7">
@@ -46,9 +46,6 @@ const Footer = () => {
                     <Image className="max-[500px]:hidden opacity-60 rotate-[270deg]" src={Arrow} alt='arrow' />
                     <a href='https://www.linkedin.com/company/infinixsoft/' target='_blank' rel='noreferrer'>
                         <FaLinkedinIn className='text-[20px] opacity-85 cursor-pointer transition duration-500 transform hover:scale-[1.055]' />
-                    </a>
-                    <a href='https://www.instagram.com/infinix.soft/' target='_blank' rel='noreferrer'>
-                        <FaInstagram className='text-[20px] opacity-85  cursor-pointer transition duration-500 transform hover:scale-[1.055] ml-1' />
                     </a>
                 </li>
             </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Dropdown_Menu = () => {
   return (
-    <nav className="animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit opacity-90 absolute border-2 border-[#313134] bg-black shadow-navbar p-1.5 rounded-md top-36 right-20 max-[469px]:right-12 max-[880px]:right-4">
+    <nav className="animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit opacity-90 absolute border-2 border-[#313134] bg-[#171718] shadow-navbar p-1.5 rounded-md top-[96px] right-[112px] max-[880px]:right-[40px] max-[469px]:right-8">
       <ul className="w-fit flex flex-col rounded-md items-start font-normal text-[14px]" role="menu">
 
       <li role="menuitem">

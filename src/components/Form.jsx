@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Arrow from "../../public/img/Form/arrow_contact.svg"
 import Logo from "../../public/img/Header/logo.svg"
 import Arrow2 from "../../public/img/Services/Arrow_2.svg"
-import { FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
+import { FaLinkedinIn } from 'react-icons/fa6';
 import Image from 'next/image';
 import { useTranslation } from 'react-i18next';
 
@@ -78,9 +78,6 @@ const Form = ({ onClose }) => {
                         <div className='flex gap-2 max-[1467px]:text-[14px] max-[1379px]:items-start max-[586px]:text-[12px] max-[422px]:flex-wrap'>
                             <a href='https://www.linkedin.com/company/infinixsoft/' target='_blank' rel='noreferrer'>
                                 <FaLinkedinIn className='text-[18px] cursor-pointer transition duration-500 transform hover:scale-[1.10]' />
-                            </a>
-                            <a href='https://www.instagram.com/infinix.soft/' target='_blank' rel='noreferrer'>
-                                <FaInstagram className='text-[18px] cursor-pointer transition duration-500 transform hover:scale-[1.10] ml-1' />
                             </a>
                         </div>
                     </li>

@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: { unoptimized: true },
+  output: 'export',
   webpack(config, { isServer }) {
     const prefix = config.assetPrefix ?? config.basePath ?? '';
     config.module.rules.push({

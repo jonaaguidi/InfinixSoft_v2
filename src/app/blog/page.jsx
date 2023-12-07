@@ -13,6 +13,8 @@ const BlogLayout = () => {
         const res = await fetch("https://cdn.contentful.com/spaces/nz4tj25d223o/environments/master/entries?access_token=9B5DHZHBguZwSoqKlU6aj00Dn7zQuPott5jjHq9UJ90&content_type=post");
         const data = await res.json();
         const titles = data.items.map((item) => item.fields.titlePost);
+        const slugs = data.items.map(item => item.fields.slug);
+        console.log(slugs)
         setPostTitles(titles);
       } catch (error) {
         console.error("Error loading posts", error);

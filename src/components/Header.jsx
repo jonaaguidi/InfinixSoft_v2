@@ -83,7 +83,7 @@ const Header = () => {
     <>
       <header className="w-full h-fit z-max bg-transparent opacity-100 px-28 py-5 flex justify-between items-center max-[880px]:px-14 max-[675px]:px-[24px] max-[675px]:py-6">
 
-        <div className="flex gap-[18px] z-50 items-center max-[500px]:gap-2 max-[410px]:gap-1">
+        <div className="flex gap-[18px] z-50 items-center max-[500px]:gap-2 max-[410px]:gap-2">
           <Link href="/">
             <Image src={Logo} width={201} height={42} alt="InfinixSoft" className="max-[580px]:w-40 max-[440px]:w-32 max-[420px]:w-30 max-[375px]:w-28 max-[360px]:w-24" />
           </Link>
