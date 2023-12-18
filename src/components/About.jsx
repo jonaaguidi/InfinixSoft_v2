@@ -26,7 +26,7 @@ const About = () => {
                     <h2 className="mt-1 font-bold text-[42px] text-[#F4F5F6] max-[540px]:text-[32px]">{t("aboutTitle")}</h2>
                 </div>
 
-                <div className="pb-10">
+                <div className="pb-10 text-[#a1a1a9]">
                     <p className="text-[18px] font-normal pb-[18px] leading-[150%] max-[540px]:text-[16px]">
                         {t("aboutText")}
                     </p>

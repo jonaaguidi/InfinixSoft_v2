@@ -14,6 +14,7 @@ import TeamComponent from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import { I18nextProvider } from 'react-i18next';
 import i18n from "../i18n/index"
+// import Blog from "@/components/Blog";
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
           <Services />
           <Partners />
           <Testimonials />
+          {/* <Blog /> */}
           <PreFooter />
         </main>
         <Footer />

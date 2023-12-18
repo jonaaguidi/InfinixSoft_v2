@@ -1,6 +1,6 @@
 import Footer from "@/components/Footer"
 import Header_v2 from "../../components/Header_v2"
-
+import { ReactQueryProvider } from "@/utils/ReactQueryProvider"
 
 export const metadata = {
     title: 'InfinixSoft - Our Blog',
@@ -10,9 +10,11 @@ export const metadata = {
 export default function BlogLayout({ children }) {
     return (
         <>
-            <Header_v2 />
-            {children}
-            <Footer />
+            <ReactQueryProvider>
+                <Header_v2 />
+                {children}
+                <Footer />
+            </ReactQueryProvider>
         </>
     )
 }
