@@ -13,7 +13,6 @@ export default function BlogLayout({ children }) {
             <ReactQueryProvider>
                 <Header_v2 />
                 {children}
-                <Footer />
             </ReactQueryProvider>
         </>
     )

@@ -40,10 +40,11 @@ const BlogLayout = () => {
         Welcome to Our Blog
         <Image src={logo} alt="InfinixSoft" width={48} height={48} />
       </h1>
-      <span className="text-2xl font-semibold text-center">
-        Loading Posts ...
-      </span>
+      <div
+        class="inline-block h-16 w-16 animate-spin rounded-full border-8 border-solid border-[#db3957] border-r-transparent align-[-0.125em] motion-reduce:animate-[spin_1.5s_linear_infinite]"
+        role="status">
       </div>
+    </div>
   } else if (isError) {
     return <div>Sorry, Error</div>
   }
@@ -56,7 +57,7 @@ const BlogLayout = () => {
           Welcome to Our Blog
           <Image src={logo} alt="InfinixSoft" width={48} height={48} />
         </h1>
-        <div className="flex flex-wrap gap-8 justify-center items-bottom">
+        <div className="flex flex-wrap gap-12 justify-center items-bottom">
           {fieldsArray.map((item, index) => (
             <div className="max-w-[320px]" key={index}>
               <Image src={getImagePost(item.coverImage?.sys?.id)} alt="imagen" width={320} height={320} />
