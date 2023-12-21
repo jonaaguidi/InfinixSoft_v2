@@ -37,7 +37,7 @@ const BlogLayout = () => {
   if (isLoading) {
     return <div className="max-w-[1300px] h-[90vh] pt-20 mx-auto flex flex-col items-center justify-start">
       <h1 className="flex justify-center items-center gap-2.5 text-[42px] leading-[120%] font-bold py-20 max-w-[666px] mx-auto text-shadow-md max-[1000px]:text-[42px] max-[680px]:text-[36px] max-[520px]:text-[32px]">
-        Welcome to Our Blog
+        Loading Posts
         <Image src={logo} alt="InfinixSoft" width={48} height={48} />
       </h1>
       <div
@@ -52,11 +52,12 @@ const BlogLayout = () => {
   return (
     <I18nextProvider i18n={i18n}>
 
-      <main className="main max-w-[1640px] px-12 mx-auto">
-        <h1 className="flex justify-center items-center gap-2.5 text-[42px] leading-[120%] font-bold py-20 max-w-[666px] mx-auto text-shadow-md max-[1000px]:text-[42px] max-[680px]:text-[36px] max-[520px]:text-[32px]">
+      <main className="main max-w-[1640px] px-12 pt-4 pb-32 mx-auto">
+        <h1 className="flex justify-center items-center gap-2.5 text-[42px] leading-[120%] font-bold pt-20 pb-4 max-w-[666px] mx-auto text-shadow-md max-[1000px]:text-[42px] max-[680px]:text-[36px] max-[520px]:text-[32px]">
           Welcome to Our Blog
           <Image src={logo} alt="InfinixSoft" width={48} height={48} />
         </h1>
+        <h3 className="text-[#a1a1a9] pb-20 text-[16px] leading-[150%] max-w-[530px] mx-auto text-center text-shadow-md max-[1000px]:text-[18px] max-[590px]:text-[16px] max-[520px]:text-[16px]">Welcome to Our Blog, here we talk about more diferrents toppics like Tecnology, Innovation, Marketing, StartUps, SAAS, Business Developments, and more..</h3>
         <div className="flex flex-wrap gap-12 justify-center items-bottom">
           {fieldsArray.map((item, index) => (
             <div className="max-w-[320px]" key={index}>
