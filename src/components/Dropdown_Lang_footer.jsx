@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
 import USA from "../../public/img/Flags/usa.png"
 import Brazil from "../../public/img/Flags/brazil.png"
-import Spain from "../../public/img/Flags/spain.png"
+import Argentina from "../../public/img/Flags/Flag_of_Argentina.svg"
 import Image from 'next/image';
 
 const Dropdown_Lang_footer = ({setShowDropdownLang}) => {
@@ -31,7 +31,7 @@ const Dropdown_Lang_footer = ({setShowDropdownLang}) => {
           onClick={() => handleLanguageChange('es')}
           className="w-full flex items-center gap-2 cursor-pointer p-2 rounded-md hover:bg-[#101010] focus:bg-[#101010] ">
           <p className="text-[12px] font-normal">{t('Spanish')}</p>
-          <Image className='rounded-sm' src={Spain} alt='United States' width={20}/>
+          <Image className='rounded-sm' src={Argentina} alt='United States' width={20}/>
         </div>
         <div
           onClick={() => handleLanguageChange('pt')}

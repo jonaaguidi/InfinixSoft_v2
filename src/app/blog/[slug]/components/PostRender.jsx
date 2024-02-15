@@ -8,7 +8,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
-import { BLOCKS, MARKS } from '@contentful/rich-text-types';
+import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types';
 
 const StyledRichText = ({ content }) => {
     const options = {
@@ -23,13 +23,34 @@ const StyledRichText = ({ content }) => {
             [MARKS.STRIKE_THROUGH]: (text) => <del>{text}</del>,
         },
         renderNode: {
-            [BLOCKS.PARAGRAPH]: (node, children) => <p className='text-[16px] pb-3 pt-2'>{children}</p>,
-            [BLOCKS.HEADING_1]: (node, children) => <h1 className='text-2xl py-2 pt-2 font-bold leading-[120%]'>{children}</h1>,
+            [BLOCKS.PARAGRAPH]: (node, children) => <p className='text-[16px] tracking-wide pb-3 pt-2'>{children}</p>,
+            [BLOCKS.HEADING_1]: (node, children) => <h1 className='text-[36px] py-2 pt-2 font-bold leading-[120%]'>{children}</h1>,
             [BLOCKS.HEADING_2]: (node, children) => <h2 className='text-2xl py-2 font-bold leading-[120%]'>{children}</h2>,
             [BLOCKS.HEADING_3]: (node, children) => <h3 className='text-2xl py-2 font-bold leading-[120%]'>{children}</h3>,
-            [BLOCKS.OL_LIST]: (node, children) => <ol className='py-2 px-4'>{children}</ol>,
-            [BLOCKS.LIST_ITEM]: (node, children) => <li className='list-disc'>{children}</li>,
+            [BLOCKS.UL_LIST]: (node, children) => <ul className='py-2 px-4 list-disc'>{children}</ul>,
+            [BLOCKS.OL_LIST]: (node, children) => <ol className='py-2 px-4 list-decimal'>{children}</ol>,
+            [BLOCKS.LIST_ITEM]: (node, children) => <li className=''>{children}</li>,
             [BLOCKS.QUOTE]: (node, children) => <blockquote>{children}</blockquote>,
+            [BLOCKS.HR]: () => <hr />,
+            [INLINES.HYPERLINK]: (node, children) => {
+                const { uri } = node.data;
+                return <a href={uri} className='transition-colors duration-500 underline hover:text-[#db3957]'>{children}</a>;
+            },
+            [BLOCKS.EMBEDDED_ASSET]: (node) => {
+                const file = node?.data?.target?.fields?.file;
+                if (!file) {
+                    return null; // Devuelve null si no hay archivo definido
+                }
+                const { url, description } = file;
+                return (
+                    <Image
+                        src={url}
+                        alt={description}
+                        className='max-w-full'
+                    />
+                );
+            },
+            
         },
     };
 
@@ -37,13 +58,19 @@ const StyledRichText = ({ content }) => {
 };
 
 const PostRender = ({ data }) => {
+    // Obtener una lista de Headings del contenido
+    const headers = data?.fields?.content?.content?.filter(
+        (node) => node.nodeType === "heading-1" || node.nodeType === "heading-2" || node.nodeType === "heading-3"
+    );
+
     return (
-        <main className='w-full h-full'>
-            <div className='max-w-[900px] mx-auto text-left px-16 pt-10 pb-20 flex flex-col items-start justify-center'>
-                <Link className='text-[14px] text-[#a1a1a9] flex justify-center items-center gap-1.5 font-semibold' href={"/blog"}>
-                    <FaArrowLeft className='scale-[0.95]' />
+        <main className='w-full h-full flex items-top justify-center pt-40'>
+            <div className='max-w-[940px] text-left px-16 pt-10 pb-20 flex flex-col items-start justify-center'>
+                <Link className='text-[14px] text-[#a1a1a9] transition-colors duration-500 hover:text-white flex justify-center items-center gap-1.5 font-semibold' href={"/blog"}>
+                    <FaArrowLeft className='scale-[1.05]' />
                     Home
                 </Link>
+
                 <div className='flex pt-5 text-[#a1a1a9] flex-wrap'>
                     <p className='text-[14px] font-semibold flex items-center justify-center mr-4'>
                         <IoPersonCircle className='scale-[1.5] mr-1.5' />
@@ -59,16 +86,30 @@ const PostRender = ({ data }) => {
                     </p>
                 </div>
 
-                <h1 className='text-2xl font-bold pt-4 pb-1'>{data?.fields?.titlePost}</h1>
+                <h1 className='text-[36px] leading-[125%] font-bold pt-4 pb-2'>{data?.fields?.titlePost}</h1>
                 <p className='text-md font-normal text-[#a1a1a9]'>{data?.fields?.descriptionPost}</p>
                 <Image className='py-6' width={900} height={500} src={getImagePost(data?.fields?.coverImage?.sys?.id)} alt='PostImage' />
                 <StyledRichText content={data?.fields.content} />
+            </div>
+            <div className='pt-10 px-2 max-w-[300px]'>
+                <p className='font-semibold text-[14px] text-[#a1a1a9] pb-2'>Table of Contents</p>
+                <ul>
+                    {headers &&
+                        headers.map((header, index) => (
+                            <li className='text-[14px]' key={index}>
+                                <a className='text-[white] hover:text-[#db3957]'>
+                                    {header.content[0].value}
+                                </a>
+                            </li>
+                        ))}
+                </ul>
             </div>
         </main>
     );
 }
 
 export default PostRender;
+
 
 // "use client"
 // import { getAuthorName } from '@/utils/getAuthorName';

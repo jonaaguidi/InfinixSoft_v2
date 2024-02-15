@@ -6,5 +6,5 @@ export const getImagePost = (imageId) => {
     };
 
     // Si no esta el ID, me devuelve "..."
-    return ImageMap[imageId] || "https://infinixsoft.com/OG-IMAGE-SOFT.webp";
+    return ImageMap[imageId] || "../../public/default-infinix.png";
   };

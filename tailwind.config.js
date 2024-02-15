@@ -6,8 +6,23 @@ module.exports = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    extend: {
+      animation: {
+        'background-shine': 'background-shine 3.5s ease-in-out infinite',
+      },
+      keyframes: {
+        'background-shine': {
+          from: {
+            backgroundPosition: '0 0',
+          },
+          to: {
+            backgroundPosition: '-200% 0',
+          },
+        },
+      },
+    },
   },
   plugins: [
-    require('tailwindcss-animated')
+    require('tailwindcss-animated'),
   ],
-}
+};

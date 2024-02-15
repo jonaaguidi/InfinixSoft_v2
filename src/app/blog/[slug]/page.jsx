@@ -8,6 +8,7 @@ export async function generateStaticParams() {
     { slug: "what-is-the-difference-between-sanity-cms-and-contentful-cms" },
     { slug: "test-1" },
     { slug: "testpost2" },
+    { slug: "hoy-es-7-de-febrero-y-esto-es-un-test" },
   ];
 }
 

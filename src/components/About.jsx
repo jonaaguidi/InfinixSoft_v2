@@ -3,7 +3,7 @@ import logo1 from "../../public/img/About/team_logo1.svg";
 import logo2 from "../../public/img/About/team_logo2.svg";
 import logo3 from "../../public/img/About/team_logo3.svg";
 import Image from "next/image";
-import DraggablePlanet from "./Planet";
+ import DraggablePlanet from "./Planet";
 
 const About = () => {
 
@@ -14,7 +14,7 @@ const About = () => {
         <section id="about" className="w-fit h-fit mx-auto px-28 py-20 flex items-center justify-center gap-10 max-[1300px]:gap-4 max-[950px]:gap-0 max-[880px]:px-14 max-[675px]:px-7">
             {/* Si el ancho es mayor a 940px aparece Planet */}
             <div className="max-[940px]:hidden">
-                  <DraggablePlanet />  
+               {/* <DraggablePlanet />      */}
             </div>  
               
             <div className="max-w-[494px] flex flex-col justify-center px-4 z-50">

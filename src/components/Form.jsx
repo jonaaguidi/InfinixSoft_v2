@@ -145,7 +145,7 @@ const Form = ({ onClose }) => {
                         <textarea
                             name="floating_message"
                             id="floating_message"
-                            className="block py-2.5 px-2 w-full h-20 text-sm text-white bg-transparent border-0 border-b-2 border-[#A1A1A9] appearance-none focus:outline-none focus:ring-0 focus:border-[#db3957] peer"
+                            className="block py-2.5 px-2 w-full h-24 text-sm text-white bg-transparent border-0 border-b-2 border-[#A1A1A9] appearance-none focus:outline-none focus:ring-0 focus:border-[#db3957] peer resize-none"
                             placeholder=""
                             required
                         />

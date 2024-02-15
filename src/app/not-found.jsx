@@ -1,13 +1,13 @@
 "use client"
 import Link from "next/link"
 import Arrow2 from "../../public/img/Services/Arrow_2.svg"
-import Header_v2 from "../components/Header_v2"
 import Image from "next/image"
+import Header from "@/components/Header"
 
 const Notfound = () => {
     return (
         <>
-            <Header_v2 />
+            <Header />
             <div className="w-full h-[74vh] flex flex-col items-center justify-center">
                 <div className="flex flex-col items-center justify-center gap-8">
                     <h3 className="text-center text-[42px] font-semibold max-[768px]:text-[28px] max-[768px]:px-14">Oops! <br></br> That page can’t be found</h3>
