@@ -1,9 +1,10 @@
+"use client"
 /* eslint-disable react/prop-types */
 import { useTranslation } from 'react-i18next';
 import i18n from 'i18next';
 import Usa from "../../public/img/Flags/usa.png"
 import Brazil from "../../public/img/Flags/brazil.png"
-import Argentina from "../../public/img/Flags/Flag_of_Argentina.svg"
+import Argentina from "../../public/img/Flags/spain.png"
 import Image from 'next/image';
 
 const Dropdown_Lang = ({ setShowDropdownLang }) => {

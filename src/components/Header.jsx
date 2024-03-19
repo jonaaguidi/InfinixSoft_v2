@@ -12,28 +12,7 @@ import Link from "next/link";
 import { MdOutlineLanguage } from "react-icons/md"
 
 const Header = () => {
-
-  // const [isScrolled, setIsScrolled] = useState(false);
-
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const scrollTop = window.scrollY;
-  //     const shouldBeScrolled = scrollTop > 1400;
-
-  //     setIsScrolled(shouldBeScrolled);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, []);
-
-  //  const headerClasses = `w-full h-fit z-max px-28 py-6 flex justify-between items-center max-[880px]:px-14 max-[675px]:px-[24px] max-[675px]:py-6 ${
-  //    isScrolled ? 'transition-wipe-in-down_2 fixed bg-[#181819] opacity-95' : 'bg-[#181819] opacity-100'
-  // }`;
-
+  
   // Estado para abrir y cerrar el Dropdown del Holding.
   const [showDropdownHolding, setShowDropdownHolding] = useState(false);
   // Estado para abrir y cerrar el Dropdown del LANG.
@@ -103,7 +82,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full h-fit bg-[#181819] opacity-95 fixed z-max px-28 py-6 flex justify-between items-center max-[880px]:px-14 max-[675px]:px-[24px] max-[675px]:py-6">
+      <header className="w-full h-fit bg-[#181819]  fixed z-max px-28 py-6 flex justify-between items-center max-[880px]:px-14 max-[675px]:px-[24px] max-[675px]:py-6">
 
         <div className="flex gap-[18px] z-50 items-center max-[500px]:gap-2 max-[410px]:gap-2">
           <Link href="/">
@@ -139,7 +118,7 @@ const Header = () => {
               {showForm && <Form onClose={() => setShowForm(false)} />}
             </li>
             <li>
-              <div onClick={toggleDropdownLang} className="badge lang-hover px-2 flex items-center justify-center gap-1 rounded-xl cursor-pointer max-[1050px]:gap-1">
+              <div onClick={toggleDropdownLang} className="badge lang-hover px-2.5 flex items-center justify-center gap-1 rounded-[45.4px] cursor-pointer max-[1050px]:gap-1">
                 <span className="text-[18px] text-white opacity-80">
                   <MdOutlineLanguage />
                 </span>

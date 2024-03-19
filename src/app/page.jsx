@@ -27,7 +27,7 @@ export default function Home() {
       <I18nextProvider i18n={i18n}>
         <Header />
         <main className="main">
-          <Hero video={Video} title={t("heroTitle")} subtitle={t("heroSubtitle")} />
+          <Hero video={Video} title={t("heroTitle")} subtitle={t("heroSubtitle")} buttonText={t("buttonText")} />
           <Banner />
           <About />
           <Culture />

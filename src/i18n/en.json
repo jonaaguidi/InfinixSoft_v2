@@ -118,6 +118,18 @@
     "formSubtitle2" : "Get in touch and let's explore the digital horizon together.",
 
     "projectsCardsTitle" : "Our Projects",
-    "projectsCardsSubtitle" : "InfinixSoft offers games, business and product development  (web, mobile, social and internet technologies)  to startup and enterprise clients."
+    "projectsCardsSubtitle" : "InfinixSoft offers games, business and product development  (web, mobile, social and internet technologies)  to startup and enterprise clients.",
+    
+    "heroTitle_Cases": "Discover Our Impact On Different Industries",
+    "heroSubtitle_Cases": "We create websites, apps, software platforms and ecommerce that allow companies to have a global impact.",
+    "buttonText_Cases": "Our Cases of Study",
+
+    "heroTitle_Services": "Our Integral Services",
+    "heroSubtitle_Services": "We create websites, apps, custom platforms and ecommerce that allow companies to have a global impact.",
+    "buttonText_Services": "Discover Our Integral Services",
+
+    "heroTitle_Blog": "Explore the Tech World with us!",
+    "heroSubtitle_Blog": "Welcome to our blog! Discover the latest trends in technology and stay updated with our content.",
+    "buttonText_Blog": "Discover Our Integral Services"
 
 }

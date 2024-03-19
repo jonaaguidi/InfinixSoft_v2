@@ -1,7 +1,7 @@
 // Importaciones/Exportaciones de Imagenes con el objetivo de modularizar el codigo.
 
 // Banner debajo del Hero.
-import Ifza from "../../public/img/Banner/IFZA-logo.png"
+import Ifza from "../../public/img/Banner/IFZA.svg"
 import AWS from "../../public/img/Banner/aws.svg"
 import HubSpot from "../../public/img/Banner/HubSpot.svg"
 import Isotipo from "../../public/img/Banner/isotipo.svg"

@@ -22,6 +22,7 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import Image from "next/image"
 import Link from "next/link"
+import { Tooltip } from "react-tooltip"
 
 
 
@@ -392,12 +393,16 @@ const Projects = () => {
       </div>
 
       <div className=" w-full flex items-center justify-center mt-28 max-[800px]:mt-20 max-[800px]:pb-12">
-        <Link href="/project" target="_self" rel="noreferrer">
-          <button className="z-100 btn-primary btn-hover transition duration-400 hover:shadow-opacity flex items-center justify-center gap-2 max-w-[300px]">
+          <button
+            data-tooltip-id="tooltip"
+            data-tooltip-content="Coming Soon.."
+            data-tooltip-place="bottom"
+           className="z-100 btn-primary btn-hover transition duration-400 hover:shadow-opacity flex items-center justify-center gap-2 max-w-[300px]">
             {t("buttonText2")}
             <Image className="ml-1 w-4" src={Arrow} alt="Arrow" />
           </button>
-        </Link>
+
+          <Tooltip id="tooltip" data-tooltip-id="tooltip" />
       </div>
 
 

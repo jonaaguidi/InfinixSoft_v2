@@ -86,7 +86,7 @@ const Form = ({ onClose }) => {
             </div>
 
             {/* Formulario */}
-            <div className="w-[496px] h-fit bg-transparent shadow-form p-10 rounded-[12px] relative top-5 border-[2px] border-[#313134] border-opacity-70 max-[586px]:w-[396px] max-[501px]:w-[328px] max-[420px]:w-[296px] max-[442px]:top-2">
+            <div className=" scale-90 mb-4 w-[496px] h-fit bg-transparent shadow-form p-10 rounded-[12px] relative top-5 border-[2px] border-[#313134] border-opacity-70 max-[586px]:w-[396px] max-[501px]:w-[328px] max-[420px]:w-[296px] max-[442px]:top-2">
                 <div className='flex items-center justify-center pb-10 max-[442px]:pb-8'>
                     <Image src={Logo} alt='Logotype' />
                 </div>
