@@ -1,60 +1,59 @@
 import Link from "next/link";
+import { IoIosHome } from "react-icons/io";
+import { IoIosRocket } from "react-icons/io";
+import { PiHandbagFill } from "react-icons/pi";
+import { IoNewspaperSharp } from "react-icons/io5";
+
+
 
 const Dropdown_Menu = () => {
   return (
-    <nav className="animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit opacity-90 absolute border-2 border-[#313134] bg-[#171718] shadow-navbar p-1.5 rounded-md top-[96px] right-[112px] max-[880px]:right-[40px] max-[469px]:right-8">
+    <nav className="animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit opacity-90 absolute border-2 border-[#313134] bg-[#171718] shadow-navbar p-3 rounded-xl top-[96px] right-[112px] max-[880px]:right-[40px] max-[469px]:right-8">
       <ul className="w-fit flex flex-col rounded-md items-start font-normal text-[14px]" role="menu">
 
       <li role="menuitem">
           <Link
-            href="/#hero"
-            className="menuitems"
+            href="/"
+            className="menuitems gap-2 flex items-center"
             rel='noreferrer'
           >
+            <IoIosHome className="scale-150" />
             <p>Home</p>
           </Link>
         </li>
 
         <li role="menuitem">
           <Link
-            href="/#projects"
-            className="menuitems"
+            href="/cases-study"
+            className="menuitems gap-2 flex items-center"
             rel='noreferrer'
           >
+          <IoIosRocket className="scale-150" />
             <p>Case Studies</p>
           </Link>
         </li>
 
         <li role="menuitem">
           <Link
-            href="/#services"
-            className="menuitems"
+            href="/our-services"
+            className="menuitems gap-2 flex items-center"
             rel='noreferrer'>
+            <PiHandbagFill className="scale-150" />
             <p>Our Services</p>
           </Link>
         </li>
 
-        <li role="menuitem">
+        {/* <li role="menuitem">
           <Link
-            href="https://infinixholdinggroup.com/partner/"
-            className="menuitems"
+            href="/blog"
+            className="menuitems gap-2.5 flex items-center"
             target="_blank"
             rel='noreferrer'
           >
-            <p>Partner</p>
+          <IoNewspaperSharp className="scale-150" />
+            <p>Blog</p>
           </Link>
-        </li>
-
-        <li role="menuitem">
-          <Link
-            href="/#contact"
-            className="menuitems"
-            rel='noreferrer'
-          >
-            <p>Contact</p>
-          </Link>
-        </li>
-
+        </li> */}
       </ul>
     </nav>
   );

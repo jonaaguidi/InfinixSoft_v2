@@ -34,7 +34,7 @@ const Services = () => {
   return (
     <>
       <Wave />
-      <div id="services" className="w-full bg-[#242427]">
+      <div id="our-services" className="w-full bg-[#242427]">
         <section className="max-w-[1220px] relative bg-[#242427] py-20 mx-auto flex flex-col items-center max-[1350px]:px-14 max-[520px]:px-7">
           <div className="max-w-[538px] flex flex-col self-start">
             <p className="badge w-fit z-10 font-normal mb-1 pb-2">{t("servicesBadge")}</p>

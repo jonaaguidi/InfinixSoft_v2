@@ -99,14 +99,14 @@ const Header = () => {
               <a href="/" className="text-[14px] font-normal cursor-pointer">Home</a>
             </li>
             <li className="hover-underline-animation mt-2 max-[1170px]:hidden">
-              <a href="/cases-study" className="text-[14px] font-normal cursor-pointer">Case Studies</a>
+              <a href="/#cases-study" className="text-[14px] font-normal cursor-pointer">Case Studies</a>
             </li>
             <li className="hover-underline-animation mt-2 max-[1170px]:hidden">
-              <a href="/our-services" className="text-[14px] font-normal cursor-pointer ">Our Services</a>
+              <a href="/#our-services" className="text-[14px] font-normal cursor-pointer ">Our Services</a>
             </li>
-            <li className="hover-underline-animation mt-2 max-[1170px]:hidden">
+            {/* <li className="hover-underline-animation mt-2 max-[1170px]:hidden">
               <a href="/blog" className="text-[14px] font-normal cursor-pointer ">Blog</a>
-            </li>
+            </li> */}
             <li className="max-[1170px]:hidden">
               <button
                 onClick={toggleShowForm}

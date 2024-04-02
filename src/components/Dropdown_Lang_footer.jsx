@@ -20,7 +20,7 @@ const Dropdown_Lang_footer = ({setShowDropdownLang}) => {
   };
 
   return (
-    <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-[#171718] p-2 rounded-md bottom-[144px] right-[144px]">
+    <div className="z-[900] animate-fade-up animate-duration-[650ms] animate-delay-25 w-fit absolute border-2 border-[#313134] bg-[#171718] p-2 rounded-xl bottom-[144px] right-[144px]">
       <div className="w-fit flex flex-col gap-1 rounded-lg items-start">
         <div
           onClick={() => handleLanguageChange('en')}

@@ -91,7 +91,7 @@ const PostRender = ({ data }) => {
                 <Image className='py-6' width={900} height={500} src={getImagePost(data?.fields?.coverImage?.sys?.id)} alt='PostImage' />
                 <StyledRichText content={data?.fields.content} />
             </div>
-            <div className='pt-10 px-2 max-w-[300px]'>
+            {/* <div className='pt-10 px-2 max-w-[300px]'>
                 <p className='font-semibold text-[14px] text-[#a1a1a9] pb-2'>Table of Contents</p>
                 <ul>
                     {headers &&
@@ -103,7 +103,7 @@ const PostRender = ({ data }) => {
                             </li>
                         ))}
                 </ul>
-            </div>
+            </div> */}
         </main>
     );
 }

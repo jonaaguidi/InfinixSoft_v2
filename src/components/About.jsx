@@ -12,7 +12,7 @@ const About = () => {
 
     return (
         <section id="about" className="w-fit h-fit mx-auto px-28 py-20 flex items-center justify-center gap-10 max-[1300px]:gap-4 max-[950px]:gap-0 max-[880px]:px-14 max-[675px]:px-7">
-            <div className="max-[900px]:hidden">
+            <div className="max-[1030px]:hidden">
                 <DraggablePlanet />
             </div>  
               
