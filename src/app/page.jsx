@@ -14,7 +14,7 @@ import TeamComponent from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
 import { I18nextProvider } from 'react-i18next';
 import i18n from "../i18n/index"
-import Video from "../../public/img/Hero/bsas.mp4"
+import Video from "../../public/img/Hero/dubai.mp4"
 import { useTranslation } from 'react-i18next';
 
 export default function Home() {

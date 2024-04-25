@@ -7,7 +7,6 @@ import ivan from "../../public/img/Team/ivan.png"
 import marcos from "../../public/img/Team/Marcos.png"
 import hernan from "../../public/img/Team/Hernan.png"
 import marcela from "../../public/img/Team/Marce.png"
-import martin from "../../public/img/Team/Martin.png"
 import luis from "../../public/img/Team/Luis.png"
 import ale from "../../public/img/Team/ale.png"
 import jero from "../../public/img/Team/jero.png"
@@ -30,7 +29,7 @@ const TeamComponent = () => {
         </p>
       </div>
 
-      <div className="flex items-start justify-start gap-x-11 gap-y-10 flex-wrap max-[1350px]:px-14 max-[1350px]:gap-x-7 max-[669px]:justify-center max-[580px]:px-7 max-[580px]:gap-x-5">
+      <div className="flex items-start justify-center gap-x-11 gap-y-10 flex-wrap max-[1350px]:px-14 max-[1350px]:gap-x-7 max-[669px]:justify-center max-[580px]:px-7 max-[580px]:gap-x-5">
 
         <div className="flex flex-col items-center justify-center member z-10 max-w-[170px] h-fit max-[580px]:max-w-[156px] max-[458px]:max-w-[146px]">
           <Image className="opacity-80" src={ivan} alt="Ivan Saroka"></Image>
@@ -75,18 +74,6 @@ const TeamComponent = () => {
           </p>
           <p className="text-[12px] font-normal text-[#A1A1A9] text-center">
             {t("marcelaPosition")}
-          </p>
-          <a href="https://www.linkedin.com/company/infinixsoft/" target="_blank" rel="noreferrer">
-            <FaLinkedinIn className="mt-1.5 opacity-50 text-[20px] cursor-pointer transition duration-500 transform hover:scale-[1.10] hover:opacity-80" />
-          </a>
-        </div>
-        <div className="flex flex-col items-center justify-center member z-10 max-w-[170px] h-fit max-[580px]:max-w-[156px] max-[458px]:max-w-[146px]">
-          <Image className="opacity-80" src={martin} alt={t("martinName")}></Image>
-          <p className="text-[14px] font-bold text-white text-center">
-            {t("martinName")}
-          </p>
-          <p className="text-[12px] font-normal text-[#A1A1A9] text-center">
-            {t("martinPosition")}
           </p>
           <a href="https://www.linkedin.com/company/infinixsoft/" target="_blank" rel="noreferrer">
             <FaLinkedinIn className="mt-1.5 opacity-50 text-[20px] cursor-pointer transition duration-500 transform hover:scale-[1.10] hover:opacity-80" />

@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { IoIosHome } from "react-icons/io";
-import { IoIosRocket } from "react-icons/io";
-import { PiHandbagFill } from "react-icons/pi";
-import { IoNewspaperSharp } from "react-icons/io5";
+// import { IoIosHome } from "react-icons/io";
+// import { IoIosRocket } from "react-icons/io";
+// import { PiHandbagFill } from "react-icons/pi";
+// import { IoNewspaperSharp } from "react-icons/io5";
 
 
 
@@ -17,28 +17,28 @@ const Dropdown_Menu = () => {
             className="menuitems gap-2 flex items-center"
             rel='noreferrer'
           >
-            <IoIosHome className="scale-150" />
+            {/* <IoIosHome className="scale-150" /> */}
             <p>Home</p>
           </Link>
         </li>
 
         <li role="menuitem">
           <Link
-            href="/cases-study"
+            href="#cases-study"
             className="menuitems gap-2 flex items-center"
             rel='noreferrer'
           >
-          <IoIosRocket className="scale-150" />
+          {/* <IoIosRocket className="scale-150" /> */}
             <p>Case Studies</p>
           </Link>
         </li>
 
         <li role="menuitem">
           <Link
-            href="/our-services"
+            href="#our-services"
             className="menuitems gap-2 flex items-center"
             rel='noreferrer'>
-            <PiHandbagFill className="scale-150" />
+            {/* <PiHandbagFill className="scale-150" /> */}
             <p>Our Services</p>
           </Link>
         </li>
